@@ -5875,3 +5875,692 @@ Processing RolesController#index to xml (for 127.0.0.1 at 2009-04-14 14:31:27) [
   [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM users WHERE (users.id = '1') [0m
   [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'User') [0m
 Completed in 109ms (View: 46, DB: 0) | 200 OK [http://127.0.0.1/users/1/roles.xml]
+
+
+Processing RolesController#index (for 127.0.0.1 at 2009-04-14 14:42:24) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM users WHERE (users.id = '1') [0m
+Rendering template within layouts/application
+Rendering roles/index
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'User') [0m
+
+ActionView::TemplateError (undefined method `except' for #<Role:0x1c390b8>) on line #14 of app/views/roles/index.html.erb:
+11:       <td><%=h role.info %></td>
+12:       <td><%= link_to "Show", polymorphic_path([@roleable, role]) %></td>
+13:       <td><%= link_to "Edit", edit_polymorphic_path([@roleable, role]) %></td>
+14:       <td><%= link_to "Destroy", polymorphic_path(@roleable, role), :confirm => 'Are you sure?', :method => :delete %></td>
+15:     </tr>
+16:   <% end %>
+17: </table>
+
+    app/views/roles/index.html.erb:14
+    app/views/roles/index.html.erb:8
+    app/controllers/roles_controller.rb:8:in `index'
+    :1:in `initialize'
+
+Rendered rescues/_trace (79.0ms)
+Rendered rescues/_request_and_response (15.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RolesController#index (for 127.0.0.1 at 2009-04-14 14:43:30) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM users WHERE (users.id = '1') [0m
+Rendering template within layouts/application
+Rendering roles/index
+ERROR: compiling _run_erb_app47views47roles47index46html46erb RAISED F:/workspace/Ubiquity_2/app/views/roles/index.html.erb:19: , unexpected tRBRACK
+Function body:           def _run_erb_app47views47roles47index46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ;  title "Roles" ; @output_buffer.concat "\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<table>\n"
+@output_buffer.concat "  <tr>\n"
+@output_buffer.concat "    <th>Name</th>\n"
+@output_buffer.concat "    <th>info</th>\n"
+@output_buffer.concat "  </tr>\n"
+@output_buffer.concat "  ";  for role in @roles ; @output_buffer.concat "\n"
+@output_buffer.concat "    <tr>\n"
+@output_buffer.concat "      <td>"; @output_buffer.concat((h role.name ).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "      <td>"; @output_buffer.concat((h role.info ).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "      <td>"; @output_buffer.concat(( link_to "Show", polymorphic_path([@roleable, role]) ).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "      <td>"; @output_buffer.concat(( link_to "Edit", edit_polymorphic_path([@roleable, role]) ).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "      <td>"; @output_buffer.concat(( link_to "Destroy", polymorphic_path(@roleable, role), :confirm => 'Are you sure?', :method => :delete ).to_s); @output_buffer.concat "</td>\n"
+@output_buffer.concat "    </tr>\n"
+@output_buffer.concat "  ";  end ; @output_buffer.concat "\n"
+@output_buffer.concat "</table>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<p>"; @output_buffer.concat(( link_to "New Role", polymorphic_path(role]) ).to_s); @output_buffer.concat "</p>\n"
+@output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:77:in `module_eval'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:77:in `compile!'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:61:in `compile'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:28:in `render'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/template.rb:194:in `render_template'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:260:in `render'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:343:in `_render_with_layout'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:257:in `render'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1241:in `render_for_file'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:943:in `render'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render_with_benchmark'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render_with_benchmark'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:135:in `custom'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:179:in `call'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:179:in `respond'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:173:in `each'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:173:in `respond'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:107:in `respond_to'
+F:/workspace/Ubiquity_2/app/controllers/roles_controller.rb:8:in `index'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1322:in `perform_action'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:617:in `call_filters'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:610:in `perform_action_with_filters'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_with_benchmark'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_with_benchmark'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rescue.rb:160:in `perform_action_with_rescue'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/flash.rb:141:in `perform_action_with_flash'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `process'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:606:in `process_with_filters'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:391:in `process'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:386:in `call'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:433:in `call'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:88:in `dispatch'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/head.rb:9:in `call'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/methodoverride.rb:24:in `call'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:48:in `call'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `each'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `call'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/content_length.rb:13:in `call'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/chunked.rb:15:in `call'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:61:in `process'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-java/lib/mongrel.rb:159:in `process_client'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-java/lib/mongrel.rb:158:in `each'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-java/lib/mongrel.rb:158:in `process_client'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-java/lib/mongrel.rb:285:in `run'
+:1:in `initialize'
+
+ActionView::TemplateError (F:/workspace/Ubiquity_2/app/views/roles/index.html.erb:19: , unexpected tRBRACK
+) on line #19 of app/views/roles/index.html.erb:
+16:   <% end %>
+17: </table>
+18: 
+19: <p><%= link_to "New Role", polymorphic_path(role]) %></p>
+
+    app/controllers/roles_controller.rb:8:in `index'
+    :1:in `initialize'
+
+Rendered rescues/_trace (62.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RolesController#index (for 127.0.0.1 at 2009-04-14 14:43:39) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM users WHERE (users.id = '1') [0m
+Rendering template within layouts/application
+Rendering roles/index
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'User') [0m
+
+ActionView::TemplateError (undefined method `except' for #<Role:0xec849e>) on line #14 of app/views/roles/index.html.erb:
+11:       <td><%=h role.info %></td>
+12:       <td><%= link_to "Show", polymorphic_path([@roleable, role]) %></td>
+13:       <td><%= link_to "Edit", edit_polymorphic_path([@roleable, role]) %></td>
+14:       <td><%= link_to "Destroy", polymorphic_path(@roleable, role), :confirm => 'Are you sure?', :method => :delete %></td>
+15:     </tr>
+16:   <% end %>
+17: </table>
+
+    app/views/roles/index.html.erb:14
+    app/views/roles/index.html.erb:8
+    app/controllers/roles_controller.rb:8:in `index'
+    :1:in `initialize'
+
+Rendered rescues/_trace (63.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RolesController#index (for 127.0.0.1 at 2009-04-14 14:43:40) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM users WHERE (users.id = '1') [0m
+Rendering template within layouts/application
+Rendering roles/index
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'User') [0m
+
+ActionView::TemplateError (undefined method `except' for #<Role:0x1355a47>) on line #14 of app/views/roles/index.html.erb:
+11:       <td><%=h role.info %></td>
+12:       <td><%= link_to "Show", polymorphic_path([@roleable, role]) %></td>
+13:       <td><%= link_to "Edit", edit_polymorphic_path([@roleable, role]) %></td>
+14:       <td><%= link_to "Destroy", polymorphic_path(@roleable, role), :confirm => 'Are you sure?', :method => :delete %></td>
+15:     </tr>
+16:   <% end %>
+17: </table>
+
+    app/views/roles/index.html.erb:14
+    app/views/roles/index.html.erb:8
+    app/controllers/roles_controller.rb:8:in `index'
+    :1:in `initialize'
+
+Rendered rescues/_trace (62.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RolesController#index (for 127.0.0.1 at 2009-04-14 14:43:42) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM users WHERE (users.id = '1') [0m
+Rendering template within layouts/application
+Rendering roles/index
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'User') [0m
+
+ActionView::TemplateError (undefined method `except' for #<Role:0xf553e3>) on line #14 of app/views/roles/index.html.erb:
+11:       <td><%=h role.info %></td>
+12:       <td><%= link_to "Show", polymorphic_path([@roleable, role]) %></td>
+13:       <td><%= link_to "Edit", edit_polymorphic_path([@roleable, role]) %></td>
+14:       <td><%= link_to "Destroy", polymorphic_path(@roleable, role), :confirm => 'Are you sure?', :method => :delete %></td>
+15:     </tr>
+16:   <% end %>
+17: </table>
+
+    app/views/roles/index.html.erb:14
+    app/views/roles/index.html.erb:8
+    app/controllers/roles_controller.rb:8:in `index'
+    :1:in `initialize'
+
+Rendered rescues/_trace (78.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RolesController#index (for 127.0.0.1 at 2009-04-14 14:44:53) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM users WHERE (users.id = '1') [0m
+Rendering template within layouts/application
+Rendering roles/index
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'User') [0m
+
+ActionView::TemplateError (undefined method `except' for #<Role:0x847574>) on line #16 of app/views/roles/index.html.erb:
+13:       <td><%=h role.info %></td>
+14:       <td><%= link_to "Show", polymorphic_path([@roleable, role]) %></td>
+15:       <td><%= link_to "Edit", edit_polymorphic_path([@roleable, role]) %></td>
+16:       <td><%= link_to "Destroy", polymorphic_path(@roleable, role), :confirm => 'Are you sure?', :method => :delete %></td>
+17:     </tr>
+18:   <% end %>
+19: </table>
+
+    app/views/roles/index.html.erb:16
+    app/views/roles/index.html.erb:10
+    app/controllers/roles_controller.rb:8:in `index'
+    :1:in `initialize'
+
+Rendered rescues/_trace (63.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RolesController#index (for 127.0.0.1 at 2009-04-14 14:45:50) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM users WHERE (users.id = '1') [0m
+Rendering template within layouts/application
+Rendering roles/index
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'User') [0m
+
+ActionView::TemplateError (undefined method `role_path' for #<ActionView::Base:0x2cef66>) on line #16 of app/views/roles/index.html.erb:
+13:       <td><%=h role.info %></td>
+14:       <td><%= link_to "Show", polymorphic_path([@roleable, role]) %></td>
+15:       <td><%= link_to "Edit", edit_polymorphic_path([@roleable, role]) %></td>
+16:       <td><%= link_to "Destroy", polymorphic_path(role), :confirm => 'Are you sure?', :method => :delete %></td>
+17:     </tr>
+18:   <% end %>
+19: </table>
+
+    app/views/roles/index.html.erb:16
+    app/views/roles/index.html.erb:10
+    app/controllers/roles_controller.rb:8:in `index'
+    :1:in `initialize'
+
+Rendered rescues/_trace (78.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RolesController#index (for 127.0.0.1 at 2009-04-14 14:45:52) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM users WHERE (users.id = '1') [0m
+Rendering template within layouts/application
+Rendering roles/index
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'User') [0m
+
+ActionView::TemplateError (undefined method `role_path' for #<ActionView::Base:0x1cc3436>) on line #16 of app/views/roles/index.html.erb:
+13:       <td><%=h role.info %></td>
+14:       <td><%= link_to "Show", polymorphic_path([@roleable, role]) %></td>
+15:       <td><%= link_to "Edit", edit_polymorphic_path([@roleable, role]) %></td>
+16:       <td><%= link_to "Destroy", polymorphic_path(role), :confirm => 'Are you sure?', :method => :delete %></td>
+17:     </tr>
+18:   <% end %>
+19: </table>
+
+    app/views/roles/index.html.erb:16
+    app/views/roles/index.html.erb:10
+    app/controllers/roles_controller.rb:8:in `index'
+    :1:in `initialize'
+
+Rendered rescues/_trace (62.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RolesController#index (for 127.0.0.1 at 2009-04-14 14:46:10) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM users WHERE (users.id = '1') [0m
+Rendering template within layouts/application
+Rendering roles/index
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'User') [0m
+
+ActionView::TemplateError (undefined method `role_path' for #<ActionView::Base:0xba63a2>) on line #20 of app/views/roles/index.html.erb:
+17:   <% end %>
+18: </table>
+19: 
+20: <p><%= link_to "New Role", polymorphic_path(role) %></p>
+
+    app/views/roles/index.html.erb:20
+    app/controllers/roles_controller.rb:8:in `index'
+    :1:in `initialize'
+
+Rendered rescues/_trace (62.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RolesController#index (for 127.0.0.1 at 2009-04-14 14:46:30) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM users WHERE (users.id = '1') [0m
+Rendering template within layouts/application
+Rendering roles/index
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'User') [0m
+Completed in 141ms (View: 62, DB: 0) | 200 OK [http://127.0.0.1/users/1/roles]
+
+
+Processing RolesController#show (for 127.0.0.1 at 2009-04-14 14:47:23) [GET]
+  Parameters: {"user_id"=>"1", "id"=>"1"}
+
+ActionController::UnknownAction (No action responded to show. Actions: index):
+  :1:in `initialize'
+
+Rendering rescues/layout (not_found)
+
+
+Processing RolesController#show (for 127.0.0.1 at 2009-04-14 14:47:27) [GET]
+  Parameters: {"user_id"=>"1", "id"=>"1"}
+
+ActionController::UnknownAction (No action responded to show. Actions: index):
+  :1:in `initialize'
+
+Rendering rescues/layout (not_found)
+
+
+Processing RolesController#index (for 127.0.0.1 at 2009-04-14 14:47:37) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM users WHERE (users.id = '1') [0m
+Rendering template within layouts/application
+Rendering roles/index
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'User') [0m
+Completed in 78ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/users/1/roles]
+
+
+Processing RolesController#new (for 127.0.0.1 at 2009-04-14 14:47:39) [GET]
+  Parameters: {"user_id"=>"1"}
+
+ActionController::UnknownAction (No action responded to new. Actions: index):
+  :1:in `initialize'
+
+Rendering rescues/layout (not_found)
+
+
+Processing RolesController#index (for 127.0.0.1 at 2009-04-14 14:47:49) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM users WHERE (users.id = '1') [0m
+Rendering template within layouts/application
+Rendering roles/index
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'User') [0m
+Completed in 62ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/users/1/roles]
+
+
+Processing RolesController#edit (for 127.0.0.1 at 2009-04-14 14:47:51) [GET]
+  Parameters: {"user_id"=>"1", "id"=>"1"}
+
+ActionController::UnknownAction (No action responded to edit. Actions: index):
+  :1:in `initialize'
+
+Rendering rescues/layout (not_found)
+
+
+Processing RolesController#index (for 127.0.0.1 at 2009-04-14 14:49:50) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM users WHERE (users.id = '1') [0m
+Rendering template within layouts/application
+Rendering roles/index
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'User') [0m
+Completed in 62ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/users/1/roles]
+
+
+Processing RolesController#index (for 127.0.0.1 at 2009-04-14 14:49:59) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM users WHERE (users.id = '1') [0m
+Rendering template within layouts/application
+Rendering roles/index
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'User') [0m
+
+ActionView::TemplateError (undefined method `role_path' for #<ActionView::Base:0x1ab4586>) on line #16 of app/views/roles/index.html.erb:
+13:       <td><%=h role.info %></td>
+14:       <td><%= link_to "Show", polymorphic_path([@roleable, role]) %></td>
+15:       <td><%= link_to "Edit", edit_polymorphic_path([@roleable, role]) %></td>
+16:       <td><%= link_to "Destroy", polymorphic_path(role), :confirm => 'Are you sure?', :method => :delete %></td>
+17:     </tr>
+18:   <% end %>
+19: </table>
+
+    app/views/roles/index.html.erb:16
+    app/views/roles/index.html.erb:10
+    app/controllers/roles_controller.rb:8:in `index'
+    :1:in `initialize'
+
+Rendered rescues/_trace (62.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RolesController#index (for 127.0.0.1 at 2009-04-14 14:50:09) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM users WHERE (users.id = '1') [0m
+Rendering template within layouts/application
+Rendering roles/index
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'User') [0m
+Completed in 63ms (View: 32, DB: 0) | 200 OK [http://127.0.0.1/users/1/roles]
+
+
+Processing RolesController#index (for 127.0.0.1 at 2009-04-14 14:54:07) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM users WHERE (users.id = '1') [0m
+Rendering template within layouts/application
+Rendering roles/index
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'User') [0m
+Completed in 63ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/users/1/roles]
+
+
+Processing RolesController#show (for 127.0.0.1 at 2009-04-14 14:54:12) [GET]
+  Parameters: {"user_id"=>"1", "id"=>"1"}
+
+ActionController::UnknownAction (No action responded to show. Actions: destroy and index):
+  :1:in `initialize'
+
+Rendering rescues/layout (not_found)
+
+
+Processing RolesController#show (for 127.0.0.1 at 2009-04-14 14:54:15) [GET]
+  Parameters: {"user_id"=>"1", "id"=>"1"}
+
+ActionController::UnknownAction (No action responded to show. Actions: destroy and index):
+  :1:in `initialize'
+
+Rendering rescues/layout (not_found)
+
+
+Processing RolesController#index to xml (for 127.0.0.1 at 2009-04-14 14:54:18) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM users WHERE (users.id = '1') [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'User') [0m
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/users/1/roles.xml]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-04-14 14:54:22) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM users WHERE (users.id = '1') [0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/users/1]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2009-04-14 14:54:25) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM users WHERE (users.id = '1') [0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered users/_form (15.0ms)
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/users/1/edit]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-04-14 14:54:27) [GET]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM users [0m
+Rendering template within layouts/application
+Rendering users/index
+Completed in 62ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-04-14 14:58:09) [GET]
+Filter chain halted as [:verify_access] rendered_or_redirected.
+Completed in 0ms (View: 0, DB: 0) | 401 Unauthorized [http://127.0.0.1/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-04-14 14:58:13) [GET]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM users [0m
+Rendering template within layouts/application
+Rendering users/index
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-04-14 14:58:45) [GET]
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (16.0ms)
+Completed in 78ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/users/new]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-04-14 14:58:47) [GET]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM users [0m
+Rendering template within layouts/application
+Rendering users/index
+Completed in 32ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-04-14 14:58:53) [GET]
+  Parameters: {"id"=>"roles"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM users WHERE (users.id = 'roles') [0m
+
+ActiveRecord::RecordNotFound (Couldn't find User with ID=roles):
+  app/controllers/users_controller.rb:7:in `show'
+  :1:in `initialize'
+
+Rendered rescues/_trace (31.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing RolesController#index (for 127.0.0.1 at 2009-04-14 14:58:58) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM users WHERE (users.id = '1') [0m
+Rendering template within layouts/application
+Rendering roles/index
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'User') [0m
+Completed in 125ms (View: 93, DB: 0) | 200 OK [http://127.0.0.1/users/1/roles]
+/!\ FAILSAFE /!\  Tue Apr 14 14:59:53 +0200 2009
+  Status: 500 Internal Server Error
+  F:/workspace/Ubiquity_2/app/controllers/application_controller.rb:20: , unexpected '='
+
+    F:/workspace/Ubiquity_2/app/controllers/application_controller.rb:380
+    F:/workspace/Ubiquity_2/app/controllers/application_controller.rb:380:in `load'
+    C:/develop/jruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:380:in `load_file'
+    C:/develop/jruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    C:/develop/jruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:379:in `load_file'
+    C:/develop/jruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:259:in `require_or_load'
+    C:/develop/jruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:425:in `load_missing_constant'
+    C:/develop/jruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:80:in `const_missing_with_dependencies'
+    C:/develop/jruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:92:in `const_missing'
+    C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:90:in `dispatch'
+    C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+    C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+    C:/develop/jruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+    C:/develop/jruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+    C:/develop/jruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    C:/develop/jruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+    C:/develop/jruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+    C:/develop/jruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/head.rb:9:in `call'
+    C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/methodoverride.rb:24:in `call'
+    C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+    C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+    C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+    C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+    C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+    C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+    C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+    C:/develop/jruby/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+    C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:48:in `call'
+    C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `each'
+    C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `call'
+    C:/develop/jruby/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+    C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/content_length.rb:13:in `call'
+    C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/chunked.rb:15:in `call'
+    C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:61:in `process'
+    C:/develop/jruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-java/lib/mongrel.rb:159:in `process_client'
+    C:/develop/jruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-java/lib/mongrel.rb:158:in `each'
+    C:/develop/jruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-java/lib/mongrel.rb:158:in `process_client'
+    C:/develop/jruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-java/lib/mongrel.rb:285:in `run'
+    :1:in `initialize'
+
+
+Processing RolesController#index (for 127.0.0.1 at 2009-04-14 15:00:24) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM users WHERE (users.id = '1') [0m
+Rendering template within layouts/application
+Rendering roles/index
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'User') [0m
+Completed in 94ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/users/1/roles]
+
+
+Processing RolesController#index (for 127.0.0.1 at 2009-04-14 15:00:35) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM users WHERE (users.id = '1') [0m
+Rendering template within layouts/application
+Rendering roles/index
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'User') [0m
+Completed in 156ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/users/1/roles]
+
+
+Processing RolesController#index (for 127.0.0.1 at 2009-04-14 15:01:06) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM users WHERE (users.id = '1') [0m
+Rendering template within layouts/application
+Rendering roles/index
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'User') [0m
+Completed in 78ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/users/1/roles]
+
+
+Processing RolesController#index (for 127.0.0.1 at 2009-04-14 15:01:10) [GET]
+  Parameters: {"group_id"=>"1"}
+  [4;35;1mGroup Load (0.0ms)[0m   [0mSELECT * FROM groups WHERE (groups.id = '1') [0m
+Rendering template within layouts/application
+Rendering roles/index
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'Group') [0m
+Completed in 47ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/groups/1/roles]
+  [4;36;1mGroup Load (0.0ms)[0m   [0;1mSELECT * FROM groups LIMIT 1[0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'Group') [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM roles [0m
+
+
+Processing GroupsController#show (for 127.0.0.1 at 2009-04-14 15:02:43) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mGroup Load (0.0ms)[0m   [0mSELECT * FROM groups WHERE (groups.id = '1') [0m
+Rendering template within layouts/application
+Rendering groups/show
+Completed in 63ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/groups/1]
+
+
+Processing GroupsController#show (for 127.0.0.1 at 2009-04-14 15:02:51) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mGroup Load (0.0ms)[0m   [0;1mSELECT * FROM groups WHERE (groups.id = '1') [0m
+Rendering template within layouts/application
+Rendering groups/show
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/groups/1]
+
+
+Processing RolesController#new (for 127.0.0.1 at 2009-04-14 15:02:55) [GET]
+  Parameters: {"group_id"=>"1"}
+
+ActionController::UnknownAction (No action responded to new. Actions: destroy and index):
+  :1:in `initialize'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mRole Create (16.0ms)[0m   [0mINSERT INTO roles (name, info, roleable_id, roleable_type, created_at, updated_at) VALUES('ruolo1', 'prova', 1, 'Group', 1239714250, 1239714250)[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT SEQ FROM SQLITE_SEQUENCE WHERE NAME = 'roles'[0m
+
+
+Processing RolesController#index (for 127.0.0.1 at 2009-04-14 15:04:16) [GET]
+  Parameters: {"group_id"=>"1"}
+  [4;35;1mGroup Load (0.0ms)[0m   [0mSELECT * FROM groups WHERE (groups.id = '1') [0m
+Rendering template within layouts/application
+Rendering roles/index
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'Group') [0m
+Completed in 63ms (View: 15, DB: 0) | 200 OK [http://127.0.0.1/groups/1/roles]
+
+
+Processing RolesController#show (for 127.0.0.1 at 2009-04-14 15:04:20) [GET]
+  Parameters: {"group_id"=>"1", "id"=>"2"}
+
+ActionController::UnknownAction (No action responded to show. Actions: destroy and index):
+  :1:in `initialize'
+
+Rendering rescues/layout (not_found)
+
+
+Processing RolesController#index to xml (for 127.0.0.1 at 2009-04-14 15:04:24) [GET]
+  Parameters: {"group_id"=>"1"}
+  [4;35;1mGroup Load (0.0ms)[0m   [0mSELECT * FROM groups WHERE (groups.id = '1') [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'Group') [0m
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/groups/1/roles.xml]
+
+
+Processing RolesController#show (for 127.0.0.1 at 2009-04-14 15:34:23) [GET]
+  Parameters: {"group_id"=>"1", "id"=>"2"}
+
+ActionController::UnknownAction (No action responded to show. Actions: destroy and index):
+  :1:in `initialize'
+
+Rendering rescues/layout (not_found)
+
+
+Processing RolesController#index to xml (for 127.0.0.1 at 2009-04-14 15:34:27) [GET]
+  Parameters: {"group_id"=>"1"}
+  [4;35;1mGroup Load (0.0ms)[0m   [0mSELECT * FROM groups WHERE (groups.id = '1') [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'Group') [0m
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/groups/1/roles.xml]
+
+
+Processing GroupsController#index (for 127.0.0.1 at 2009-04-14 15:34:31) [GET]
+  [4;35;1mGroup Load (0.0ms)[0m   [0mSELECT * FROM groups [0m
+Rendering template within layouts/application
+Rendering groups/index
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/groups]

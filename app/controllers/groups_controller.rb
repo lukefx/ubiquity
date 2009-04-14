@@ -15,6 +15,16 @@ class GroupsController < ApplicationController
     
   end
 
+  def create
+    @group = Group.new(params[:group])
+    if @group.save
+      flash[:notice] = "Successfully created group."
+      redirect_to @group
+    else
+      render :action => 'new'
+    end
+  end
+
   def show
     @group = Group.find(params[:id])
     

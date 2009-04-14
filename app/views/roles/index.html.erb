@@ -11,7 +11,7 @@
       <td><%=h role.info %></td>
       <td><%= link_to "Show", polymorphic_path([@roleable, role]) %></td>
       <td><%= link_to "Edit", edit_polymorphic_path([@roleable, role]) %></td>
-      <td><%= link_to "Destroy", polymorphic_path(@roleable, role), :confirm => 'Are you sure?', :method => :delete %></td>
+      <td><%= link_to "Destroy", polymorphic_path([@roleable, role]), :confirm => 'Are you sure?', :method => :delete %></td>
     </tr>
   <% end %>
 </table>

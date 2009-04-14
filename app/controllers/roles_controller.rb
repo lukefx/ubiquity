@@ -11,6 +11,14 @@ class RolesController < ApplicationController
     end 
   end
 
+  def destroy
+    
+    @role = Role.find(params[:role_id])
+    @role.destroy
+    flash[:notice] = "Successfully destroyed role."
+    redirect_to [@roleable, :roles]
+  end
+
   private
   
   def find_parent
