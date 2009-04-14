@@ -1,0 +1,11 @@
+one:
+  nickname: MyString
+  password: MyString
+  description: MyText
+  access: 2009-04-14 11:30:34
+
+two:
+  nickname: MyString
+  password: MyString
+  description: MyText
+  access: 2009-04-14 11:30:34
