@@ -15,6 +15,10 @@ class GroupsController < ApplicationController
     
   end
 
+  def new
+    @group = Group.new
+  end
+
   def create
     @group = Group.new(params[:group])
     if @group.save
@@ -32,6 +36,15 @@ class GroupsController < ApplicationController
       format.html
       format.xml  { render :xml => @group }
     end
+  end
+
+  def destroy
+    @group = Group.find(params[:id])
+    @group.destroy
+    respond_to do |format|
+      format.html { redirect_to group_path }
+      format.js
+  end
     
   end
 

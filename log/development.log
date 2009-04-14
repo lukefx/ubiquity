@@ -6857,3 +6857,479 @@ ActionController::UnknownAction (No action responded to new. Actions: create, in
   :1:in `initialize'
 
 Rendering rescues/layout (not_found)
+
+
+Processing GroupsController#index (for 127.0.0.1 at 2009-04-14 16:23:58) [GET]
+  [4;36;1mGroup Load (0.0ms)[0m   [0;1mSELECT * FROM groups [0m
+Rendering template within layouts/application
+Rendering groups/index
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://127.0.0.1/groups]
+
+
+Processing GroupsController#new (for 127.0.0.1 at 2009-04-14 16:24:00) [GET]
+Rendering template within layouts/application
+Rendering groups/new
+Rendered groups/_form (31.0ms)
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/groups/new]
+
+
+Processing GroupsController#index (for 127.0.0.1 at 2009-04-14 16:24:04) [GET]
+  [4;35;1mGroup Load (0.0ms)[0m   [0mSELECT * FROM groups [0m
+Rendering template within layouts/application
+Rendering groups/index
+Completed in 15ms (View: 15, DB: 0) | 200 OK [http://127.0.0.1/groups]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-04-14 16:24:12) [GET]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM users [0m
+Rendering template within layouts/application
+Rendering users/index
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-04-14 16:24:18) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM users WHERE (users.id = '1') [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mGroup Load (0.0ms)[0m   [0;1mSELECT * FROM groups INNER JOIN groups_users ON groups.id = groups_users.group_id WHERE (groups_users.user_id = 1 ) [0m
+Completed in 63ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/users/1]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2009-04-14 16:24:21) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM users WHERE (users.id = '1') [0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered users/_form (16.0ms)
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/users/1/edit]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-04-14 16:24:23) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM users WHERE (users.id = '1') [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mGroup Load (0.0ms)[0m   [0mSELECT * FROM groups INNER JOIN groups_users ON groups.id = groups_users.group_id WHERE (groups_users.user_id = 1 ) [0m
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/users/1]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-04-14 16:25:49) [GET]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM users [0m
+Rendering template within layouts/application
+Rendering users/index
+Completed in 15ms (View: 15, DB: 0) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2009-04-14 16:25:51) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM users WHERE (users.id = '1') [0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered users/_form (0.0ms)
+Completed in 32ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/users/1/edit]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-04-14 16:25:53) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM users WHERE (users.id = '1') [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mGroup Load (0.0ms)[0m   [0mSELECT * FROM groups INNER JOIN groups_users ON groups.id = groups_users.group_id WHERE (groups_users.user_id = 1 ) [0m
+Completed in 46ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/users/1]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-04-14 16:25:55) [GET]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM users [0m
+Rendering template within layouts/application
+Rendering users/index
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-04-14 16:25:57) [GET]
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (16.0ms)
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/users/new]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2009-04-14 16:26:12) [POST]
+  Parameters: {"authenticity_token"=>"+PL0uEqO6LlnuQY+MTm4MIXeqETzojrsHpcNdLk9PEE=", "user"=>{"nickname"=>"Poldo", "password"=>"aaa", "password_confirmation"=>"aaa", "description"=>"Poldo"}, "commit"=>"Submit"}
+  [4;35;1mUser Create (32.0ms)[0m   [0mINSERT INTO users (nickname, password, description, access, created_at, updated_at) VALUES('Poldo', 'aaa', 'Poldo', NULL, 1239719172, 1239719172)[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT SEQ FROM SQLITE_SEQUENCE WHERE NAME = 'users'[0m
+Redirected to http://127.0.0.1:3000/users/2
+Completed in 110ms (DB: 32) | 302 Found [http://127.0.0.1/users]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-04-14 16:26:12) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM users WHERE (users.id = '2') [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mGroup Load (0.0ms)[0m   [0;1mSELECT * FROM groups INNER JOIN groups_users ON groups.id = groups_users.group_id WHERE (groups_users.user_id = 2 ) [0m
+Completed in 32ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/users/2]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-04-14 16:26:14) [GET]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM users [0m
+Rendering template within layouts/application
+Rendering users/index
+Completed in 32ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-04-14 16:26:17) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM users WHERE (users.id = '2') [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mGroup Load (0.0ms)[0m   [0mSELECT * FROM groups INNER JOIN groups_users ON groups.id = groups_users.group_id WHERE (groups_users.user_id = 2 ) [0m
+Completed in 63ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/users/2]
+
+
+Processing GroupsController#index (for 127.0.0.1 at 2009-04-14 16:26:36) [GET]
+  [4;36;1mGroup Load (0.0ms)[0m   [0;1mSELECT * FROM groups [0m
+Rendering template within layouts/application
+Rendering groups/index
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/groups]
+
+
+Processing GroupsController#show (for 127.0.0.1 at 2009-04-14 16:26:40) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mGroup Load (0.0ms)[0m   [0mSELECT * FROM groups WHERE (groups.id = '2') [0m
+Rendering template within layouts/application
+Rendering groups/show
+Completed in 15ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/groups/2]
+
+
+Processing GroupsController#index (for 127.0.0.1 at 2009-04-14 16:26:43) [GET]
+  [4;36;1mGroup Load (0.0ms)[0m   [0;1mSELECT * FROM groups [0m
+Rendering template within layouts/application
+Rendering groups/index
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://127.0.0.1/groups]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-04-14 16:26:46) [GET]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM users [0m
+Rendering template within layouts/application
+Rendering users/index
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-04-14 16:26:48) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM users WHERE (users.id = '2') [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mGroup Load (0.0ms)[0m   [0mSELECT * FROM groups INNER JOIN groups_users ON groups.id = groups_users.group_id WHERE (groups_users.user_id = 2 ) [0m
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/users/2]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2009-04-14 16:26:49) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM users WHERE (users.id = '2') [0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered users/_form (16.0ms)
+Completed in 32ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/users/2/edit]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-04-14 16:26:51) [GET]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM users [0m
+Rendering template within layouts/application
+Rendering users/index
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-04-14 16:32:34) [GET]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM users [0m
+Rendering template within layouts/application
+Rendering users/index
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://127.0.0.1/users]
+
+
+Processing GroupsController#index (for 127.0.0.1 at 2009-04-14 16:32:37) [GET]
+  [4;35;1mGroup Load (0.0ms)[0m   [0mSELECT * FROM groups [0m
+Rendering template within layouts/application
+Rendering groups/index
+
+ActionView::TemplateError (undefined local variable or method `person' for #<ActionView::Base:0x767237>) on line #15 of app/views/groups/index.html.erb:
+12: 	<td><%= group.description -%></td>
+13:     <td><%= link_to 'Show', group %></td>
+14:     <td><%= link_to 'Edit', edit_group_path(group) %></td>
+15:     <td><%= link_to_remote 'Destroy', :url => person_path(person), :confirm => 'Are you sure?', :method => :delete %></td>	
+16:   </tr>
+17: <% end %>
+18: </table>
+
+    app/views/groups/index.html.erb:15
+    app/views/groups/index.html.erb:9:in `each'
+    app/views/groups/index.html.erb:9
+    app/controllers/groups_controller.rb:11:in `index'
+    :1:in `initialize'
+
+Rendered rescues/_trace (47.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing GroupsController#index (for 127.0.0.1 at 2009-04-14 16:32:54) [GET]
+  [4;36;1mGroup Load (16.0ms)[0m   [0;1mSELECT * FROM groups [0m
+Rendering template within layouts/application
+Rendering groups/index
+
+ActionView::TemplateError (undefined method `each' for #<Group:0x631b3b>) on line #15 of app/views/groups/index.html.erb:
+12: 	<td><%= group.description -%></td>
+13:     <td><%= link_to 'Show', group %></td>
+14:     <td><%= link_to 'Edit', edit_group_path(group) %></td>
+15:     <td><%= link_to_remote 'Destroy', group, :confirm => 'Are you sure?', :method => :delete %></td>	
+16:   </tr>
+17: <% end %>
+18: </table>
+
+    app/views/groups/index.html.erb:15
+    app/views/groups/index.html.erb:9:in `each'
+    app/views/groups/index.html.erb:9
+    app/controllers/groups_controller.rb:11:in `index'
+    :1:in `initialize'
+
+Rendered rescues/_trace (62.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing GroupsController#index (for 127.0.0.1 at 2009-04-14 16:33:42) [GET]
+  [4;35;1mGroup Load (0.0ms)[0m   [0mSELECT * FROM groups [0m
+Rendering template within layouts/application
+Rendering groups/index
+Completed in 32ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/groups]
+
+
+Processing GroupsController#new (for 127.0.0.1 at 2009-04-14 16:33:45) [GET]
+Rendering template within layouts/application
+Rendering groups/new
+Rendered groups/_form (16.0ms)
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/groups/new]
+
+
+Processing GroupsController#create (for 127.0.0.1 at 2009-04-14 16:33:51) [POST]
+  Parameters: {"authenticity_token"=>"+PL0uEqO6LlnuQY+MTm4MIXeqETzojrsHpcNdLk9PEE=", "group"=>{"name"=>"Poldi", "description"=>"prova gruppo"}, "commit"=>"Submit"}
+  [4;36;1mGroup Create (0.0ms)[0m   [0;1mINSERT INTO groups (name, description, created_at, updated_at) VALUES('Poldi', 'prova gruppo', 1239719631, 1239719631)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT SEQ FROM SQLITE_SEQUENCE WHERE NAME = 'groups'[0m
+Redirected to http://127.0.0.1:3000/groups/3
+Completed in 47ms (DB: 0) | 302 Found [http://127.0.0.1/groups]
+
+
+Processing GroupsController#show (for 127.0.0.1 at 2009-04-14 16:33:51) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mGroup Load (0.0ms)[0m   [0;1mSELECT * FROM groups WHERE (groups.id = '3') [0m
+Rendering template within layouts/application
+Rendering groups/show
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/groups/3]
+
+
+Processing GroupsController#index (for 127.0.0.1 at 2009-04-14 16:33:52) [GET]
+  [4;35;1mGroup Load (0.0ms)[0m   [0mSELECT * FROM groups [0m
+Rendering template within layouts/application
+Rendering groups/index
+Completed in 32ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/groups]
+
+
+Processing GroupsController#index (for 127.0.0.1 at 2009-04-14 16:34:31) [GET]
+  [4;36;1mGroup Load (0.0ms)[0m   [0;1mSELECT * FROM groups [0m
+Rendering template within layouts/application
+Rendering groups/index
+
+ActionView::TemplateError (undefined method `each' for #<Group:0x4605c7>) on line #15 of app/views/groups/index.html.erb:
+12: 	<td><%= group.description -%></td>
+13:     <td><%= link_to 'Show', group %></td>
+14:     <td><%= link_to 'Edit', edit_group_path(group) %></td>
+15:     <td><%= link_to_remote 'Destroy', group, :confirm => 'Are you sure?', :method => :delete %></td>	
+16:   </tr>
+17: <% end %>
+18: </table>
+
+    app/views/groups/index.html.erb:15
+    app/views/groups/index.html.erb:9:in `each'
+    app/views/groups/index.html.erb:9
+    app/controllers/groups_controller.rb:11:in `index'
+    :1:in `initialize'
+
+Rendered rescues/_trace (63.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing GroupsController#index (for 127.0.0.1 at 2009-04-14 16:37:05) [GET]
+  [4;35;1mGroup Load (0.0ms)[0m   [0mSELECT * FROM groups [0m
+Rendering template within layouts/application
+Rendering groups/index
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/groups]
+
+
+Processing GroupsController#destroy (for 127.0.0.1 at 2009-04-14 16:37:08) [DELETE]
+  Parameters: {"authenticity_token"=>"+PL0uEqO6LlnuQY+MTm4MIXeqETzojrsHpcNdLk9PEE=", "id"=>"3"}
+  [4;36;1mGroup Load (0.0ms)[0m   [0;1mSELECT * FROM groups WHERE (groups.id = '3') [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM users INNER JOIN groups_users ON users.id = groups_users.user_id WHERE (groups_users.group_id = 3 ) [0m
+  [4;36;1mGroup Destroy (0.0ms)[0m   [0;1mDELETE FROM groups WHERE id = 3[0m
+Rendering groups/destroy
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #1 of app/views/groups/destroy.js.rjs:
+1: page[dom_id(@person)].visual_effect :fade
+
+    app/views/groups/destroy.js.rjs:1:in `_run_rjs_app47views47groups47destroy46js46rjs'
+    app/views/groups/destroy.js.rjs:1:in `_run_rjs_app47views47groups47destroy46js46rjs'
+    app/controllers/groups_controller.rb:44:in `destroy'
+    :1:in `initialize'
+
+Rendered rescues/_trace (63.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing GroupsController#index (for 127.0.0.1 at 2009-04-14 16:40:08) [GET]
+  [4;35;1mGroup Load (0.0ms)[0m   [0mSELECT * FROM groups [0m
+Rendering template within layouts/application
+Rendering groups/index
+
+ActionView::TemplateError (undefined local variable or method `person' for #<ActionView::Base:0x1d29c95>) on line #10 of app/views/groups/index.html.erb:
+7:   </tr>
+8: 
+9: <% for group in @groups %>
+10:   <tr id="<%= dom_id(person)%> ">
+11:   	<td><%= group.name -%></td>
+12: 	<td><%= group.description -%></td>
+13:     <td><%= link_to 'Show', group %></td>
+
+    app/views/groups/index.html.erb:10
+    app/views/groups/index.html.erb:9:in `each'
+    app/views/groups/index.html.erb:9
+    app/controllers/groups_controller.rb:11:in `index'
+    :1:in `initialize'
+
+Rendered rescues/_trace (63.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing GroupsController#index (for 127.0.0.1 at 2009-04-14 16:40:24) [GET]
+  [4;36;1mGroup Load (0.0ms)[0m   [0;1mSELECT * FROM groups [0m
+Rendering template within layouts/application
+Rendering groups/index
+Completed in 47ms (View: 32, DB: 0) | 200 OK [http://127.0.0.1/groups]
+
+
+Processing GroupsController#new (for 127.0.0.1 at 2009-04-14 16:40:27) [GET]
+Rendering template within layouts/application
+Rendering groups/new
+Rendered groups/_form (16.0ms)
+Completed in 32ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/groups/new]
+
+
+Processing GroupsController#create (for 127.0.0.1 at 2009-04-14 16:40:33) [POST]
+  Parameters: {"authenticity_token"=>"+PL0uEqO6LlnuQY+MTm4MIXeqETzojrsHpcNdLk9PEE=", "group"=>{"name"=>"Poldi", "description"=>"gruppo di poldi"}, "commit"=>"Submit"}
+  [4;35;1mGroup Create (0.0ms)[0m   [0mINSERT INTO groups (name, description, created_at, updated_at) VALUES('Poldi', 'gruppo di poldi', 1239720033, 1239720033)[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT SEQ FROM SQLITE_SEQUENCE WHERE NAME = 'groups'[0m
+Redirected to http://127.0.0.1:3000/groups/4
+Completed in 47ms (DB: 0) | 302 Found [http://127.0.0.1/groups]
+
+
+Processing GroupsController#show (for 127.0.0.1 at 2009-04-14 16:40:34) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mGroup Load (0.0ms)[0m   [0mSELECT * FROM groups WHERE (groups.id = '4') [0m
+Rendering template within layouts/application
+Rendering groups/show
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/groups/4]
+
+
+Processing GroupsController#index (for 127.0.0.1 at 2009-04-14 16:40:35) [GET]
+  [4;36;1mGroup Load (0.0ms)[0m   [0;1mSELECT * FROM groups [0m
+Rendering template within layouts/application
+Rendering groups/index
+Completed in 32ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/groups]
+
+
+Processing GroupsController#destroy (for 127.0.0.1 at 2009-04-14 16:40:39) [DELETE]
+  Parameters: {"authenticity_token"=>"+PL0uEqO6LlnuQY+MTm4MIXeqETzojrsHpcNdLk9PEE=", "id"=>"4"}
+  [4;35;1mGroup Load (0.0ms)[0m   [0mSELECT * FROM groups WHERE (groups.id = '4') [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM users INNER JOIN groups_users ON users.id = groups_users.user_id WHERE (groups_users.group_id = 4 ) [0m
+  [4;35;1mGroup Destroy (0.0ms)[0m   [0mDELETE FROM groups WHERE id = 4[0m
+Rendering groups/destroy
+Completed in 94ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/groups/4]
+
+
+Processing GroupsController#index (for 127.0.0.1 at 2009-04-14 16:41:09) [GET]
+  [4;36;1mGroup Load (16.0ms)[0m   [0;1mSELECT * FROM groups [0m
+Rendering template within layouts/application
+Rendering groups/index
+Completed in 31ms (View: 15, DB: 16) | 200 OK [http://127.0.0.1/groups]
+
+
+Processing GroupsController#new (for 127.0.0.1 at 2009-04-14 16:41:10) [GET]
+Rendering template within layouts/application
+Rendering groups/new
+Rendered groups/_form (0.0ms)
+Completed in 15ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/groups/new]
+
+
+Processing GroupsController#create (for 127.0.0.1 at 2009-04-14 16:41:16) [POST]
+  Parameters: {"authenticity_token"=>"+PL0uEqO6LlnuQY+MTm4MIXeqETzojrsHpcNdLk9PEE=", "group"=>{"name"=>"Poldi", "description"=>"gruppo di poldi"}, "commit"=>"Submit"}
+  [4;35;1mGroup Create (0.0ms)[0m   [0mINSERT INTO groups (name, description, created_at, updated_at) VALUES('Poldi', 'gruppo di poldi', 1239720076, 1239720076)[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT SEQ FROM SQLITE_SEQUENCE WHERE NAME = 'groups'[0m
+Redirected to http://127.0.0.1:3000/groups/5
+Completed in 78ms (DB: 0) | 302 Found [http://127.0.0.1/groups]
+
+
+Processing GroupsController#show (for 127.0.0.1 at 2009-04-14 16:41:16) [GET]
+  Parameters: {"id"=>"5"}
+  [4;35;1mGroup Load (0.0ms)[0m   [0mSELECT * FROM groups WHERE (groups.id = '5') [0m
+Rendering template within layouts/application
+Rendering groups/show
+Completed in 15ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/groups/5]
+
+
+Processing GroupsController#index (for 127.0.0.1 at 2009-04-14 16:41:17) [GET]
+  [4;36;1mGroup Load (0.0ms)[0m   [0;1mSELECT * FROM groups [0m
+Rendering template within layouts/application
+Rendering groups/index
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://127.0.0.1/groups]
+
+
+Processing GroupsController#destroy (for 127.0.0.1 at 2009-04-14 16:41:20) [DELETE]
+  Parameters: {"authenticity_token"=>"+PL0uEqO6LlnuQY+MTm4MIXeqETzojrsHpcNdLk9PEE=", "id"=>"5"}
+  [4;35;1mGroup Load (0.0ms)[0m   [0mSELECT * FROM groups WHERE (groups.id = '5') [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM users INNER JOIN groups_users ON users.id = groups_users.user_id WHERE (groups_users.group_id = 5 ) [0m
+  [4;35;1mGroup Destroy (0.0ms)[0m   [0mDELETE FROM groups WHERE id = 5[0m
+Rendering groups/destroy
+Completed in 78ms (View: 0, DB: 0) | 200 OK [http://127.0.0.1/groups/5]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-04-14 16:46:49) [GET]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM users [0m
+Rendering template within layouts/application
+Rendering users/index
+Completed in 32ms (View: 16, DB: 0) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-04-14 16:46:51) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM users WHERE (users.id = '2') [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mGroup Load (0.0ms)[0m   [0;1mSELECT * FROM groups INNER JOIN groups_users ON groups.id = groups_users.group_id WHERE (groups_users.user_id = 2 ) [0m
+Completed in 47ms (View: 32, DB: 0) | 200 OK [http://127.0.0.1/users/2]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-04-14 16:46:52) [GET]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM users [0m
+Rendering template within layouts/application
+Rendering users/index
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://127.0.0.1/users]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-04-14 16:46:53) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM users WHERE (users.id = '1') [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mGroup Load (0.0ms)[0m   [0mSELECT * FROM groups INNER JOIN groups_users ON groups.id = groups_users.group_id WHERE (groups_users.user_id = 1 ) [0m
+Completed in 63ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/users/1]

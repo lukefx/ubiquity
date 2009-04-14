@@ -7,12 +7,12 @@
   </tr>
 
 <% for group in @groups %>
-  <tr>
+  <tr id="<%= dom_id(group) -%>">
   	<td><%= group.name -%></td>
 	<td><%= group.description -%></td>
     <td><%= link_to 'Show', group %></td>
     <td><%= link_to 'Edit', edit_group_path(group) %></td>
-    <td><%= link_to 'Destroy', group, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to_remote 'Destroy', :url => group_path(group), :confirm => 'Are you sure?', :method => :delete %></td>	
   </tr>
 <% end %>
 </table>
