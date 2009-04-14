@@ -27,6 +27,9 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :users, :has_many => [ :roles, :groups ]
   map.resources :groups, :has_many => [ :roles, :users ]
 
+  map.resources :roles, :has_many => :permissions
+  map.resources :applications, :has_many => :permissions
+
   # Sample resource route within a namespace:
   #   map.namespace :admin do |admin|
   #     # Directs /admin/products/* to Admin::ProductsController (app/controllers/admin/products_controller.rb)

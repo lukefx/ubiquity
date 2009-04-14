@@ -5,17 +5,17 @@
   <%=h @user.nickname %>
 </p>
 <p>
-  <strong>Password:</strong>
-  <%=h @user.password %>
-</p>
-<p>
   <strong>Description:</strong>
   <%=h @user.description %>
 </p>
 <p>
-  <strong>Access:</strong>
-  <%=h @user.access %>
+  <strong>Last Access:</strong>
+  <%=h @user.access ||= "Never logged in" %>
 </p>
+
+<h2>Belongs to this groups:</h2>
+
+<%= ul @user.groups.map(&:name) %>
 
 <p>
   <%= link_to "Edit", edit_user_path(@user) %> |

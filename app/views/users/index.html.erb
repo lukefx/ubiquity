@@ -3,16 +3,14 @@
 <table>
   <tr>
     <th>Nickname</th>
-    <th>Password</th>
     <th>Description</th>
-    <th>Access</th>
+    <th>Last access</th>
   </tr>
   <% for user in @users %>
     <tr>
       <td><%=h user.nickname %></td>
-      <td><%=h user.password %></td>
       <td><%=h user.description %></td>
-      <td><%=h user.access %></td>
+      <td><%=h user.access ||= "Never logged in" %></td>
       <td><%= link_to "Show", user %></td>
       <td><%= link_to "Edit", edit_user_path(user) %></td>
       <td><%= link_to "Destroy", user, :confirm => 'Are you sure?', :method => :delete %></td>
