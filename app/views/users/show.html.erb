@@ -14,8 +14,11 @@
 </p>
 
 <h2>Belongs to this groups:</h2>
-
 <%= ul @user.groups.map(&:name) %>
+
+<h2>Has this roles:</h2>
+
+<%= @user.all_roles.map(&:name).join(", ") -%>
 
 <p>
   <%= link_to "Edit", edit_user_path(@user) %> |

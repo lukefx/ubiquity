@@ -7333,3 +7333,1582 @@ Rendering template within layouts/application
 Rendering users/show
   [4;35;1mGroup Load (0.0ms)[0m   [0mSELECT * FROM groups INNER JOIN groups_users ON groups.id = groups_users.group_id WHERE (groups_users.user_id = 1 ) [0m
 Completed in 63ms (View: 47, DB: 0) | 200 OK [http://127.0.0.1/users/1]
+
+
+Processing Rails::InfoController#properties (for 127.0.0.1 at 2009-04-15 09:01:09) [GET]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Completed in 156ms (View: 0, DB: 0) | 200 OK [http://localhost/rails/info/properties]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-04-15 09:01:13) [GET]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM users [0m
+Rendering template within layouts/application
+Rendering users/index
+Completed in 5359ms (View: 5188, DB: 0) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2009-04-15 09:01:24) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM users WHERE (users.id = '2') [0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered users/_form (32.0ms)
+Completed in 63ms (View: 47, DB: 0) | 200 OK [http://localhost/users/2/edit]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-04-15 09:01:26) [GET]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM users [0m
+Rendering template within layouts/application
+Rendering users/index
+Completed in 93ms (View: 78, DB: 0) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-04-15 09:01:27) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM users WHERE (users.id = '2') [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mGroup Load (0.0ms)[0m   [0mSELECT * FROM groups INNER JOIN groups_users ON groups.id = groups_users.group_id WHERE (groups_users.user_id = 2 ) [0m
+Completed in 172ms (View: 140, DB: 0) | 200 OK [http://localhost/users/2]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-04-15 09:01:30) [GET]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM users [0m
+Rendering template within layouts/application
+Rendering users/index
+Completed in 46ms (View: 31, DB: 0) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-04-15 09:01:31) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM users WHERE (users.id = '1') [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mGroup Load (0.0ms)[0m   [0;1mSELECT * FROM groups INNER JOIN groups_users ON groups.id = groups_users.group_id WHERE (groups_users.user_id = 1 ) [0m
+Completed in 94ms (View: 63, DB: 0) | 200 OK [http://localhost/users/1]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-04-15 09:01:36) [GET]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM users [0m
+Rendering template within layouts/application
+Rendering users/index
+Completed in 62ms (View: 47, DB: 0) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-04-15 09:11:29) [GET]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM users [0m
+Rendering template within layouts/application
+Rendering users/index
+Completed in 63ms (View: 32, DB: 0) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-04-15 09:17:26) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM users WHERE (users.id = '1') [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mGroup Load (0.0ms)[0m   [0;1mSELECT * FROM groups INNER JOIN groups_users ON groups.id = groups_users.group_id WHERE (groups_users.user_id = 1 ) [0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'Group') [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'User') [0m
+Completed in 172ms (View: 141, DB: 0) | 200 OK [http://localhost/users/1]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-04-15 09:18:53) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM users WHERE (users.id = '1') [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mGroup Load (0.0ms)[0m   [0;1mSELECT * FROM groups INNER JOIN groups_users ON groups.id = groups_users.group_id WHERE (groups_users.user_id = 1 ) [0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'User') [0m
+Completed in 109ms (View: 78, DB: 0) | 200 OK [http://localhost/users/1]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-04-15 09:18:55) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM users WHERE (users.id = '1') [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mGroup Load (0.0ms)[0m   [0mSELECT * FROM groups INNER JOIN groups_users ON groups.id = groups_users.group_id WHERE (groups_users.user_id = 1 ) [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'User') [0m
+Completed in 94ms (View: 78, DB: 0) | 200 OK [http://localhost/users/1]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-04-15 09:19:00) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM users WHERE (users.id = '1') [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mGroup Load (0.0ms)[0m   [0;1mSELECT * FROM groups INNER JOIN groups_users ON groups.id = groups_users.group_id WHERE (groups_users.user_id = 1 ) [0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'Group') [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'User') [0m
+Completed in 110ms (View: 94, DB: 0) | 200 OK [http://localhost/users/1]
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM roles [0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM roles LIMIT 1[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-04-15 09:23:15) [GET]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM users [0m
+Rendering template within layouts/application
+Rendering users/index
+Completed in 78ms (View: 62, DB: 0) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-04-15 09:23:17) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM users WHERE (users.id = '2') [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mGroup Load (0.0ms)[0m   [0mSELECT * FROM groups INNER JOIN groups_users ON groups.id = groups_users.group_id WHERE (groups_users.user_id = 2 ) [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM roles WHERE (roles.roleable_id = 2 AND roles.roleable_type = 'User') [0m
+Completed in 94ms (View: 79, DB: 0) | 200 OK [http://localhost/users/2]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-04-15 09:23:19) [GET]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM users [0m
+Rendering template within layouts/application
+Rendering users/index
+Completed in 47ms (View: 32, DB: 0) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-04-15 09:50:08) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM users WHERE (users.id = '1') [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mGroup Load (0.0ms)[0m   [0mSELECT * FROM groups INNER JOIN groups_users ON groups.id = groups_users.group_id WHERE (groups_users.user_id = 1 ) [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'Group') [0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'User') [0m
+Completed in 125ms (View: 63, DB: 0) | 200 OK [http://localhost/users/1]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-04-15 09:53:05) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM users WHERE (users.id = '1') [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mGroup Load (0.0ms)[0m   [0mSELECT * FROM groups INNER JOIN groups_users ON groups.id = groups_users.group_id WHERE (groups_users.user_id = 1 ) [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'Group') [0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'User') [0m
+Completed in 78ms (View: 63, DB: 0) | 200 OK [http://localhost/users/1]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-04-15 09:53:25) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM users WHERE (users.id = '1') [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mGroup Load (0.0ms)[0m   [0mSELECT * FROM groups INNER JOIN groups_users ON groups.id = groups_users.group_id WHERE (groups_users.user_id = 1 ) [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'Group') [0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'User') [0m
+Completed in 109ms (View: 94, DB: 0) | 200 OK [http://localhost/users/1]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-04-15 09:53:44) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Load (15.0ms)[0m   [0;1mSELECT * FROM users WHERE (users.id = '1') [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mGroup Load (0.0ms)[0m   [0mSELECT * FROM groups INNER JOIN groups_users ON groups.id = groups_users.group_id WHERE (groups_users.user_id = 1 ) [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'Group') [0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'User') [0m
+Completed in 110ms (View: 79, DB: 15) | 200 OK [http://localhost/users/1]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM users LIMIT 1[0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'User') [0m
+  [4;36;1mGroup Load (47.0ms)[0m   [0;1mSELECT * FROM groups INNER JOIN groups_users ON groups.id = groups_users.group_id WHERE (groups_users.user_id = 1 ) [0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-04-15 09:56:26) [GET]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM users [0m
+Rendering template within layouts/application
+Rendering users/index
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-04-15 09:56:28) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM users WHERE (users.id = '2') [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mGroup Load (0.0ms)[0m   [0;1mSELECT * FROM groups INNER JOIN groups_users ON groups.id = groups_users.group_id WHERE (groups_users.user_id = 2 ) [0m
+  [4;35;1mRole Load (16.0ms)[0m   [0mSELECT * FROM roles WHERE (roles.roleable_id = 2 AND roles.roleable_type = 'User') [0m
+Completed in 406ms (View: 375, DB: 16) | 200 OK [http://localhost/users/2]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-04-15 09:56:33) [GET]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM users [0m
+Rendering template within layouts/application
+Rendering users/index
+Completed in 109ms (View: 62, DB: 0) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-04-15 09:56:34) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM users WHERE (users.id = '1') [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mGroup Load (0.0ms)[0m   [0;1mSELECT * FROM groups INNER JOIN groups_users ON groups.id = groups_users.group_id WHERE (groups_users.user_id = 1 ) [0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'Group') [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'User') [0m
+Completed in 94ms (View: 63, DB: 0) | 200 OK [http://localhost/users/1]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-04-15 09:57:34) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM users WHERE (users.id = '1') [0m
+Rendering template within layouts/application
+Rendering users/show
+ERROR: compiling _run_erb_app47views47users47show46html46erb RAISED F:/workspace/Ubiquity_2/app/views/users/show.html.erb:21: , unexpected tRPAREN
+Function body:           def _run_erb_app47views47users47show46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ;  title "User" ; @output_buffer.concat "\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<p>\n"
+@output_buffer.concat "  <strong>Nickname:</strong>\n"
+@output_buffer.concat "  "; @output_buffer.concat((h @user.nickname ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "</p>\n"
+@output_buffer.concat "<p>\n"
+@output_buffer.concat "  <strong>Description:</strong>\n"
+@output_buffer.concat "  "; @output_buffer.concat((h @user.description ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "</p>\n"
+@output_buffer.concat "<p>\n"
+@output_buffer.concat "  <strong>Last Access:</strong>\n"
+@output_buffer.concat "  "; @output_buffer.concat((h @user.access ||= "Never logged in" ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "</p>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<h2>Belongs to this groups:</h2>\n"
+@output_buffer.concat(( ul @user.groups.map(&:name) ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<h2>Has this roles:</h2>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat(( @user.all_roles.each do |r| ).to_s)
+@output_buffer.concat "\t"; @output_buffer.concat(( r.name ).to_s); @output_buffer.concat ", \n"
+ end ; @output_buffer.concat "\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<p>\n"
+@output_buffer.concat "  "; @output_buffer.concat(( link_to "Edit", edit_user_path(@user) ).to_s); @output_buffer.concat " |\n"
+@output_buffer.concat "  "; @output_buffer.concat(( link_to "Destroy", @user, :confirm => 'Are you sure?', :method => :delete ).to_s); @output_buffer.concat " |\n"
+@output_buffer.concat "  "; @output_buffer.concat(( link_to "View All", users_path ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "</p>\n"
+@output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:77:in `module_eval'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:77:in `compile!'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:61:in `compile'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:28:in `render'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/template.rb:194:in `render_template'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:260:in `render'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:343:in `_render_with_layout'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:257:in `render'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1241:in `render_for_file'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:943:in `render'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render_with_benchmark'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render_with_benchmark'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:135:in `custom'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:179:in `call'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:179:in `respond'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:173:in `each'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:173:in `respond'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:107:in `respond_to'
+F:/workspace/Ubiquity_2/app/controllers/users_controller.rb:10:in `show'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1322:in `perform_action'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:617:in `call_filters'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:610:in `perform_action_with_filters'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_with_benchmark'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_with_benchmark'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rescue.rb:160:in `perform_action_with_rescue'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/flash.rb:141:in `perform_action_with_flash'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `process'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:606:in `process_with_filters'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:391:in `process'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:386:in `call'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:433:in `call'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:88:in `dispatch'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/head.rb:9:in `call'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/methodoverride.rb:24:in `call'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:48:in `call'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `each'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `call'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/content_length.rb:13:in `call'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/chunked.rb:15:in `call'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:61:in `process'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-java/lib/mongrel.rb:159:in `process_client'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-java/lib/mongrel.rb:158:in `each'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-java/lib/mongrel.rb:158:in `process_client'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-java/lib/mongrel.rb:285:in `run'
+:1:in `initialize'
+
+ActionView::TemplateError (F:/workspace/Ubiquity_2/app/views/users/show.html.erb:21: , unexpected tRPAREN
+) on line #21 of app/views/users/show.html.erb:
+18: 
+19: <h2>Has this roles:</h2>
+20: 
+21: <%= @user.all_roles.each do |r| -%>
+22: 	<%= r.name -%>, 
+23: <% end %>
+24: 
+
+    app/controllers/users_controller.rb:10:in `show'
+    :1:in `initialize'
+
+Rendered rescues/_trace (157.0ms)
+Rendered rescues/_request_and_response (15.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-04-15 09:57:42) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM users WHERE (users.id = '1') [0m
+Rendering template within layouts/application
+Rendering users/show
+ERROR: compiling _run_erb_app47views47users47show46html46erb RAISED F:/workspace/Ubiquity_2/app/views/users/show.html.erb:21: , unexpected tRPAREN
+Function body:           def _run_erb_app47views47users47show46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ;  title "User" ; @output_buffer.concat "\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<p>\n"
+@output_buffer.concat "  <strong>Nickname:</strong>\n"
+@output_buffer.concat "  "; @output_buffer.concat((h @user.nickname ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "</p>\n"
+@output_buffer.concat "<p>\n"
+@output_buffer.concat "  <strong>Description:</strong>\n"
+@output_buffer.concat "  "; @output_buffer.concat((h @user.description ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "</p>\n"
+@output_buffer.concat "<p>\n"
+@output_buffer.concat "  <strong>Last Access:</strong>\n"
+@output_buffer.concat "  "; @output_buffer.concat((h @user.access ||= "Never logged in" ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "</p>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<h2>Belongs to this groups:</h2>\n"
+@output_buffer.concat(( ul @user.groups.map(&:name) ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<h2>Has this roles:</h2>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat(( @user.all_roles.each do |r| ).to_s)
+@output_buffer.concat "\t"; @output_buffer.concat(( r.name ).to_s)
+ end ; @output_buffer.concat "\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<p>\n"
+@output_buffer.concat "  "; @output_buffer.concat(( link_to "Edit", edit_user_path(@user) ).to_s); @output_buffer.concat " |\n"
+@output_buffer.concat "  "; @output_buffer.concat(( link_to "Destroy", @user, :confirm => 'Are you sure?', :method => :delete ).to_s); @output_buffer.concat " |\n"
+@output_buffer.concat "  "; @output_buffer.concat(( link_to "View All", users_path ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "</p>\n"
+@output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:77:in `module_eval'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:77:in `compile!'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:61:in `compile'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:28:in `render'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/template.rb:194:in `render_template'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:260:in `render'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:343:in `_render_with_layout'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:257:in `render'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1241:in `render_for_file'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:943:in `render'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render_with_benchmark'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render_with_benchmark'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:135:in `custom'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:179:in `call'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:179:in `respond'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:173:in `each'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:173:in `respond'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:107:in `respond_to'
+F:/workspace/Ubiquity_2/app/controllers/users_controller.rb:10:in `show'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1322:in `perform_action'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:617:in `call_filters'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:610:in `perform_action_with_filters'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_with_benchmark'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_with_benchmark'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rescue.rb:160:in `perform_action_with_rescue'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/flash.rb:141:in `perform_action_with_flash'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `process'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:606:in `process_with_filters'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:391:in `process'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:386:in `call'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:433:in `call'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:88:in `dispatch'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/head.rb:9:in `call'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/methodoverride.rb:24:in `call'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:48:in `call'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `each'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `call'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/content_length.rb:13:in `call'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/chunked.rb:15:in `call'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:61:in `process'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-java/lib/mongrel.rb:159:in `process_client'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-java/lib/mongrel.rb:158:in `each'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-java/lib/mongrel.rb:158:in `process_client'
+C:/develop/jruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-java/lib/mongrel.rb:285:in `run'
+:1:in `initialize'
+
+ActionView::TemplateError (F:/workspace/Ubiquity_2/app/views/users/show.html.erb:21: , unexpected tRPAREN
+) on line #21 of app/views/users/show.html.erb:
+18: 
+19: <h2>Has this roles:</h2>
+20: 
+21: <%= @user.all_roles.each do |r| -%>
+22: 	<%= r.name -%>
+23: <% end %>
+24: 
+
+    app/controllers/users_controller.rb:10:in `show'
+    :1:in `initialize'
+
+Rendered rescues/_trace (78.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-04-15 09:58:00) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM users WHERE (users.id = '1') [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mGroup Load (0.0ms)[0m   [0;1mSELECT * FROM groups INNER JOIN groups_users ON groups.id = groups_users.group_id WHERE (groups_users.user_id = 1 ) [0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'Group') [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'User') [0m
+Completed in 125ms (View: 78, DB: 0) | 200 OK [http://localhost/users/1]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-04-15 10:00:17) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM users WHERE (users.id = '1') [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mGroup Load (0.0ms)[0m   [0;1mSELECT * FROM groups INNER JOIN groups_users ON groups.id = groups_users.group_id WHERE (groups_users.user_id = 1 ) [0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'Group') [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'User') [0m
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each) on line #21 of app/views/users/show.html.erb:
+18: 
+19: <h2>Has this roles:</h2>
+20: 
+21: <% @user.all_roles.each do |r| %>
+22: 	<%= r.name %>
+23: <% end %>
+24: 
+
+    app/views/users/show.html.erb:21
+    app/controllers/users_controller.rb:10:in `show'
+    :1:in `initialize'
+
+Rendered rescues/_trace (63.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-04-15 10:00:32) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM users WHERE (users.id = '1') [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mGroup Load (0.0ms)[0m   [0;1mSELECT * FROM groups INNER JOIN groups_users ON groups.id = groups_users.group_id WHERE (groups_users.user_id = 1 ) [0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'Group') [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'User') [0m
+Completed in 78ms (View: 62, DB: 0) | 200 OK [http://localhost/users/1]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-04-15 10:01:40) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM users WHERE (users.id = '1') [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mGroup Load (0.0ms)[0m   [0;1mSELECT * FROM groups INNER JOIN groups_users ON groups.id = groups_users.group_id WHERE (groups_users.user_id = 1 ) [0m
+
+ActionView::TemplateError (undefined local variable or method `r' for #<User:0x176829e>) on line #21 of app/views/users/show.html.erb:
+18: 
+19: <h2>Has this roles:</h2>
+20: 
+21: <% @user.all_roles.each do |r| %>
+22: 	<%= r.name %>
+23: <% end %>
+24: 
+
+    app/models/user.rb:12:in `all_roles'
+    app/models/user.rb:11:in `all_roles'
+    app/views/users/show.html.erb:21
+    app/controllers/users_controller.rb:10:in `show'
+    :1:in `initialize'
+
+Rendered rescues/_trace (79.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-04-15 10:03:41) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM users WHERE (users.id = '1') [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mGroup Load (0.0ms)[0m   [0;1mSELECT * FROM groups INNER JOIN groups_users ON groups.id = groups_users.group_id WHERE (groups_users.user_id = 1 ) [0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'Group') [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'User') [0m
+Completed in 78ms (View: 47, DB: 0) | 200 OK [http://localhost/users/1]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-04-15 10:03:45) [GET]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM users [0m
+Rendering template within layouts/application
+Rendering users/index
+Completed in 32ms (View: 16, DB: 0) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-04-15 10:03:47) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM users WHERE (users.id = '2') [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mGroup Load (0.0ms)[0m   [0mSELECT * FROM groups INNER JOIN groups_users ON groups.id = groups_users.group_id WHERE (groups_users.user_id = 2 ) [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM roles WHERE (roles.roleable_id = 2 AND roles.roleable_type = 'User') [0m
+Completed in 78ms (View: 47, DB: 0) | 200 OK [http://localhost/users/2]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-04-15 10:03:48) [GET]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM users [0m
+Rendering template within layouts/application
+Rendering users/index
+Completed in 47ms (View: 32, DB: 0) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-04-15 10:03:49) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM users WHERE (users.id = '1') [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mGroup Load (0.0ms)[0m   [0mSELECT * FROM groups INNER JOIN groups_users ON groups.id = groups_users.group_id WHERE (groups_users.user_id = 1 ) [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'Group') [0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'User') [0m
+Completed in 62ms (View: 47, DB: 0) | 200 OK [http://localhost/users/1]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-04-15 10:04:08) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM users WHERE (users.id = '1') [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mGroup Load (0.0ms)[0m   [0mSELECT * FROM groups INNER JOIN groups_users ON groups.id = groups_users.group_id WHERE (groups_users.user_id = 1 ) [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'Group') [0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'User') [0m
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each) on line #21 of app/views/users/show.html.erb:
+18: 
+19: <h2>Has this roles:</h2>
+20: 
+21: <% @user.all_roles.each do |r| %>
+22: 	<%= r.name %>
+23: <% end %>
+24: 
+
+    app/views/users/show.html.erb:21
+    app/controllers/users_controller.rb:10:in `show'
+    :1:in `initialize'
+
+Rendered rescues/_trace (63.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-04-15 10:04:21) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM users WHERE (users.id = '1') [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mGroup Load (0.0ms)[0m   [0mSELECT * FROM groups INNER JOIN groups_users ON groups.id = groups_users.group_id WHERE (groups_users.user_id = 1 ) [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'Group') [0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'User') [0m
+Completed in 63ms (View: 47, DB: 0) | 200 OK [http://localhost/users/1]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-04-15 10:04:23) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM users WHERE (users.id = '1') [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mGroup Load (0.0ms)[0m   [0mSELECT * FROM groups INNER JOIN groups_users ON groups.id = groups_users.group_id WHERE (groups_users.user_id = 1 ) [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'Group') [0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'User') [0m
+Completed in 62ms (View: 47, DB: 0) | 200 OK [http://localhost/users/1]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-04-15 10:04:38) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM users WHERE (users.id = '1') [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mGroup Load (0.0ms)[0m   [0mSELECT * FROM groups INNER JOIN groups_users ON groups.id = groups_users.group_id WHERE (groups_users.user_id = 1 ) [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'Group') [0m
+
+ActionView::TemplateError (undefined method `+@' for #<Class:0x2a4640>) on line #21 of app/views/users/show.html.erb:
+18: 
+19: <h2>Has this roles:</h2>
+20: 
+21: <% @user.all_roles.each do |r| %>
+22: 	<%= r.name %>
+23: <% end %>
+24: 
+
+    app/models/user.rb:16:in `all_roles'
+    app/views/users/show.html.erb:21
+    app/controllers/users_controller.rb:10:in `show'
+    :1:in `initialize'
+
+Rendered rescues/_trace (62.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-04-15 10:04:48) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM users WHERE (users.id = '1') [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mGroup Load (0.0ms)[0m   [0;1mSELECT * FROM groups INNER JOIN groups_users ON groups.id = groups_users.group_id WHERE (groups_users.user_id = 1 ) [0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'Group') [0m
+
+ActionView::TemplateError (undefined method `+@' for #<Class:0x1b35853>) on line #21 of app/views/users/show.html.erb:
+18: 
+19: <h2>Has this roles:</h2>
+20: 
+21: <% @user.all_roles.each do |r| %>
+22: 	<%= r.name %>
+23: <% end %>
+24: 
+
+    app/models/user.rb:16:in `all_roles'
+    app/views/users/show.html.erb:21
+    app/controllers/users_controller.rb:10:in `show'
+    :1:in `initialize'
+
+Rendered rescues/_trace (62.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-04-15 10:04:49) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM users WHERE (users.id = '1') [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mGroup Load (0.0ms)[0m   [0mSELECT * FROM groups INNER JOIN groups_users ON groups.id = groups_users.group_id WHERE (groups_users.user_id = 1 ) [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'Group') [0m
+
+ActionView::TemplateError (undefined method `+@' for #<Class:0x1272332>) on line #21 of app/views/users/show.html.erb:
+18: 
+19: <h2>Has this roles:</h2>
+20: 
+21: <% @user.all_roles.each do |r| %>
+22: 	<%= r.name %>
+23: <% end %>
+24: 
+
+    app/models/user.rb:16:in `all_roles'
+    app/views/users/show.html.erb:21
+    app/controllers/users_controller.rb:10:in `show'
+    :1:in `initialize'
+
+Rendered rescues/_trace (62.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-04-15 10:05:50) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM users WHERE (users.id = '1') [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mGroup Load (0.0ms)[0m   [0;1mSELECT * FROM groups INNER JOIN groups_users ON groups.id = groups_users.group_id WHERE (groups_users.user_id = 1 ) [0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'Group') [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'User') [0m
+Completed in 78ms (View: 62, DB: 0) | 200 OK [http://localhost/users/1]
+  [4;35;1mGroup Load (0.0ms)[0m   [0mSELECT * FROM groups LIMIT 1[0m
+  [4;36;1mGroup Load (0.0ms)[0m   [0;1mSELECT * FROM groups LIMIT 1[0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'Group') [0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-04-15 10:08:47) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM users WHERE (users.id = '1') [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mGroup Load (0.0ms)[0m   [0;1mSELECT * FROM groups INNER JOIN groups_users ON groups.id = groups_users.group_id WHERE (groups_users.user_id = 1 ) [0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'Group') [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'User') [0m
+Completed in 78ms (View: 63, DB: 0) | 200 OK [http://localhost/users/1]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-04-15 10:09:25) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM users WHERE (users.id = '1') [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mGroup Load (0.0ms)[0m   [0;1mSELECT * FROM groups INNER JOIN groups_users ON groups.id = groups_users.group_id WHERE (groups_users.user_id = 1 ) [0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'Group') [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'User') [0m
+Completed in 78ms (View: 63, DB: 0) | 200 OK [http://localhost/users/1]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-04-15 10:09:59) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM users WHERE (users.id = '1') [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mGroup Load (0.0ms)[0m   [0;1mSELECT * FROM groups INNER JOIN groups_users ON groups.id = groups_users.group_id WHERE (groups_users.user_id = 1 ) [0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'Group') [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'User') [0m
+Completed in 78ms (View: 46, DB: 0) | 200 OK [http://localhost/users/1]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-04-15 10:10:38) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM users WHERE (users.id = '1') [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mGroup Load (0.0ms)[0m   [0;1mSELECT * FROM groups INNER JOIN groups_users ON groups.id = groups_users.group_id WHERE (groups_users.user_id = 1 ) [0m
+Completed in 63ms (View: 47, DB: 0) | 200 OK [http://localhost/users/1]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-04-15 10:10:50) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM users WHERE (users.id = '1') [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mGroup Load (0.0ms)[0m   [0;1mSELECT * FROM groups INNER JOIN groups_users ON groups.id = groups_users.group_id WHERE (groups_users.user_id = 1 ) [0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'Group') [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'User') [0m
+Completed in 78ms (View: 47, DB: 0) | 200 OK [http://localhost/users/1]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-04-15 10:11:15) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Load (16.0ms)[0m   [0mSELECT * FROM users WHERE (users.id = '1') [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mGroup Load (0.0ms)[0m   [0;1mSELECT * FROM groups INNER JOIN groups_users ON groups.id = groups_users.group_id WHERE (groups_users.user_id = 1 ) [0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'Group') [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'User') [0m
+
+ActionView::TemplateError (undefined method `<=>' for #<Role:0x1b5dab5>) on line #21 of app/views/users/show.html.erb:
+18: 
+19: <h2>Has this roles:</h2>
+20: 
+21: <%= @user.all_roles.map(&:name).join(", ") -%>
+22: 
+23: <p>
+24:   <%= link_to "Edit", edit_user_path(@user) %> |
+
+    app/models/user.rb:15:in `sort'
+    app/models/user.rb:15:in `all_roles'
+    app/views/users/show.html.erb:21
+    app/controllers/users_controller.rb:10:in `show'
+    :1:in `initialize'
+
+Rendered rescues/_trace (47.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-04-15 10:12:32) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM users WHERE (users.id = '1') [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mGroup Load (0.0ms)[0m   [0;1mSELECT * FROM groups INNER JOIN groups_users ON groups.id = groups_users.group_id WHERE (groups_users.user_id = 1 ) [0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'Group') [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'User') [0m
+Completed in 63ms (View: 47, DB: 0) | 200 OK [http://localhost/users/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20090310132534)
+Migrating to CreateRoles (20090310132710)
+Migrating to CreateGroups (20090310132825)
+Migrating to GroupsUsers (20090310132911)
+Migrating to CreatePermissions (20090310133020)
+Migrating to CreateApplications (20090310133051)
+Migrating to PermissionsRoles (20090310133232)
+Migrating to AddSelfReferenceToGroups (20090415081913)
+  [4;35;1mSQL (141.0ms)[0m   [0mALTER TABLE groups ADD group_id integer(0)[0m
+  [4;36;1mSQL (47.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090415081913')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT SEQ FROM SQLITE_SEQUENCE WHERE NAME = 'schema_migrations'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT name, sql FROM sqlite_master WHERE tbl_name = 'applications' AND type = 'index'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT name, sql FROM sqlite_master WHERE tbl_name = 'groups' AND type = 'index'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT name, sql FROM sqlite_master WHERE tbl_name = 'groups_users' AND type = 'index'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT name, sql FROM sqlite_master WHERE tbl_name = 'permissions' AND type = 'index'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT name, sql FROM sqlite_master WHERE tbl_name = 'permissions_roles' AND type = 'index'[0m
+  [4;36;1mSQL (15.0ms)[0m   [0;1mSELECT name, sql FROM sqlite_master WHERE tbl_name = 'roles' AND type = 'index'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT name, sql FROM sqlite_master WHERE tbl_name = 'users' AND type = 'index'[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-04-15 10:29:56) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM users WHERE (users.id = '1') [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mGroup Load (0.0ms)[0m   [0mSELECT * FROM groups INNER JOIN groups_users ON groups.id = groups_users.group_id WHERE (groups_users.user_id = 1 ) [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'Group') [0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'User') [0m
+Completed in 2062ms (View: 2031, DB: 0) | 200 OK [http://localhost/users/1]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-04-15 10:32:45) [GET]
+  Parameters: {"id"=>"wsdl"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM users WHERE (users.id = 'wsdl') [0m
+
+ActiveRecord::RecordNotFound (Couldn't find User with ID=wsdl):
+  app/controllers/users_controller.rb:10:in `show'
+  :1:in `initialize'
+
+Rendered rescues/_trace (140.0ms)
+Rendered rescues/_request_and_response (47.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-04-15 10:33:31) [GET]
+  Parameters: {"id"=>"wsdl"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM users WHERE (users.id = 'wsdl') [0m
+
+ActiveRecord::RecordNotFound (Couldn't find User with ID=wsdl):
+  app/controllers/users_controller.rb:10:in `show'
+  :1:in `initialize'
+
+Rendered rescues/_trace (46.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-04-15 10:33:58) [GET]
+  Parameters: {"id"=>"wsdl"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM users WHERE (users.id = 'wsdl') [0m
+
+ActiveRecord::RecordNotFound (Couldn't find User with ID=wsdl):
+  app/controllers/users_controller.rb:10:in `show'
+  :1:in `initialize'
+
+Rendered rescues/_trace (47.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-04-15 10:33:59) [GET]
+  Parameters: {"id"=>"wsdl"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM users WHERE (users.id = 'wsdl') [0m
+
+ActiveRecord::RecordNotFound (Couldn't find User with ID=wsdl):
+  app/controllers/users_controller.rb:10:in `show'
+  :1:in `initialize'
+
+Rendered rescues/_trace (47.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing UserController#wsdl (for 127.0.0.1 at 2009-04-15 10:38:55) [GET]
+Sending data 
+Completed in 78ms (View: 0, DB: 0) | 200 OK [http://localhost/user/wsdl]
+
+
+Processing UserController#wsdl (for 127.0.0.1 at 2009-04-15 10:38:56) [GET]
+Sending data 
+Completed in 94ms (View: 0, DB: 0) | 200 OK [http://localhost/user/wsdl]
+
+
+Processing UserController#api (for 127.0.0.1 at 2009-04-15 10:39:09) [POST]
+  Parameters: {"envelope"=>{"xmlns:soapenv"=>"http://schemas.xmlsoap.org/soap/envelope/", "xmlns:ns0"=>"urn:ActionWebService", "xmlns:xsd"=>"http://www.w3.org/2001/XMLSchema", "xmlns:xsi"=>"http://www.w3.org/2001/XMLSchema-instance", "body"=>{"get_users"=>nil}}}
+
+Web Service Request: GetUsers() Entrypoint: api
+  <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns0="urn:ActionWebService" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <soapenv:Body>
+  <ns0:GetUsers/>
+  </soapenv:Body>
+  </soapenv:Envelope>
+
+Web Service Response (0.000000): => ["User 1", "User 2"]
+  <?xml version="1.0" encoding="UTF-8" ?>
+  <env:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+      xmlns:env="http://schemas.xmlsoap.org/soap/envelope/">
+    <env:Body>
+      <n1:GetUsersResponse env:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+          xmlns:n1="urn:ActionWebService">
+        <return xmlns:n2="http://schemas.xmlsoap.org/soap/encoding/"
+            n2:arrayType="xsd:string[2]"
+            xsi:type="n2:Array">
+          <item>User 1</item>
+          <item>User 2</item>
+        </return>
+      </n1:GetUsersResponse>
+    </env:Body>
+  </env:Envelope>
+Sending data 
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/user/api]
+
+
+Processing ApplicationController#wsdl (for 127.0.0.1 at 2009-04-15 10:40:07) [GET]
+
+TypeError (User is not a valid base type):
+  C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/support/signature_types.rb:73:in `canonical_type_name'
+  C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/support/signature_types.rb:47:in `canonical_type'
+  C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/support/signature_types.rb:35:in `canonical_signature_entry'
+  C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/support/signature_types.rb:33:in `canonical_signature_entry'
+  C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/support/signature_types.rb:22:in `canonical_signature'
+  C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/support/signature_types.rb:22:in `map'
+  C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/support/signature_types.rb:22:in `canonical_signature'
+  C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/api.rb:80:in `api_method'
+  app/services/user_api.rb:3
+  app/services/user_api.rb:380:in `load'
+  C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/container/action_controller_container.rb:62:in `require_web_service_api'
+  C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/container/action_controller_container.rb:48:in `web_service_api_with_require'
+  C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/container/action_controller_container.rb:85:in `inherited_with_api'
+  C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/dispatcher/action_controller_dispatcher.rb:32:in `inherited_with_action_controller'
+  app/controllers/user_controller.rb:1
+  app/controllers/user_controller.rb:380:in `load'
+  :1:in `initialize'
+
+Rendered rescues/_trace (157.0ms)
+Rendered rescues/_request_and_response (15.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#wsdl (for 127.0.0.1 at 2009-04-15 10:40:08) [GET]
+
+TypeError (User is not a valid base type):
+  C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/support/signature_types.rb:73:in `canonical_type_name'
+  C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/support/signature_types.rb:47:in `canonical_type'
+  C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/support/signature_types.rb:35:in `canonical_signature_entry'
+  C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/support/signature_types.rb:33:in `canonical_signature_entry'
+  C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/support/signature_types.rb:22:in `canonical_signature'
+  C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/support/signature_types.rb:22:in `map'
+  C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/support/signature_types.rb:22:in `canonical_signature'
+  C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/api.rb:80:in `api_method'
+  app/services/user_api.rb:3
+  app/services/user_api.rb:380:in `load'
+  C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/container/action_controller_container.rb:62:in `require_web_service_api'
+  C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/container/action_controller_container.rb:48:in `web_service_api_with_require'
+  C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/container/action_controller_container.rb:85:in `inherited_with_api'
+  C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/dispatcher/action_controller_dispatcher.rb:32:in `inherited_with_action_controller'
+  app/controllers/user_controller.rb:1
+  app/controllers/user_controller.rb:380:in `load'
+  :1:in `initialize'
+
+Rendered rescues/_trace (63.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#wsdl (for 127.0.0.1 at 2009-04-15 10:40:22) [GET]
+
+TypeError (user is not a valid base type):
+  C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/support/signature_types.rb:73:in `canonical_type_name'
+  C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/support/signature_types.rb:47:in `canonical_type'
+  C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/support/signature_types.rb:35:in `canonical_signature_entry'
+  C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/support/signature_types.rb:33:in `canonical_signature_entry'
+  C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/support/signature_types.rb:22:in `canonical_signature'
+  C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/support/signature_types.rb:22:in `map'
+  C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/support/signature_types.rb:22:in `canonical_signature'
+  C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/api.rb:80:in `api_method'
+  app/services/user_api.rb:3
+  app/services/user_api.rb:380:in `load'
+  C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/container/action_controller_container.rb:62:in `require_web_service_api'
+  C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/container/action_controller_container.rb:48:in `web_service_api_with_require'
+  C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/container/action_controller_container.rb:85:in `inherited_with_api'
+  C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/dispatcher/action_controller_dispatcher.rb:32:in `inherited_with_action_controller'
+  app/controllers/user_controller.rb:1
+  app/controllers/user_controller.rb:380:in `load'
+  :1:in `initialize'
+
+Rendered rescues/_trace (63.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#wsdl (for 127.0.0.1 at 2009-04-15 10:40:22) [GET]
+
+TypeError (user is not a valid base type):
+  C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/support/signature_types.rb:73:in `canonical_type_name'
+  C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/support/signature_types.rb:47:in `canonical_type'
+  C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/support/signature_types.rb:35:in `canonical_signature_entry'
+  C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/support/signature_types.rb:33:in `canonical_signature_entry'
+  C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/support/signature_types.rb:22:in `canonical_signature'
+  C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/support/signature_types.rb:22:in `map'
+  C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/support/signature_types.rb:22:in `canonical_signature'
+  C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/api.rb:80:in `api_method'
+  app/services/user_api.rb:3
+  app/services/user_api.rb:380:in `load'
+  C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/container/action_controller_container.rb:62:in `require_web_service_api'
+  C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/container/action_controller_container.rb:48:in `web_service_api_with_require'
+  C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/container/action_controller_container.rb:85:in `inherited_with_api'
+  C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/dispatcher/action_controller_dispatcher.rb:32:in `inherited_with_action_controller'
+  app/controllers/user_controller.rb:1
+  app/controllers/user_controller.rb:380:in `load'
+  :1:in `initialize'
+
+Rendered rescues/_trace (63.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#wsdl (for 127.0.0.1 at 2009-04-15 10:40:28) [GET]
+
+TypeError (user is not a valid base type):
+  C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/support/signature_types.rb:73:in `canonical_type_name'
+  C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/support/signature_types.rb:47:in `canonical_type'
+  C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/support/signature_types.rb:35:in `canonical_signature_entry'
+  C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/support/signature_types.rb:33:in `canonical_signature_entry'
+  C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/support/signature_types.rb:22:in `canonical_signature'
+  C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/support/signature_types.rb:22:in `map'
+  C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/support/signature_types.rb:22:in `canonical_signature'
+  C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/api.rb:80:in `api_method'
+  app/services/user_api.rb:3
+  app/services/user_api.rb:380:in `load'
+  C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/container/action_controller_container.rb:62:in `require_web_service_api'
+  C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/container/action_controller_container.rb:48:in `web_service_api_with_require'
+  C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/container/action_controller_container.rb:85:in `inherited_with_api'
+  C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/dispatcher/action_controller_dispatcher.rb:32:in `inherited_with_action_controller'
+  app/controllers/user_controller.rb:1
+  app/controllers/user_controller.rb:380:in `load'
+  :1:in `initialize'
+
+Rendered rescues/_trace (47.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#wsdl (for 127.0.0.1 at 2009-04-15 10:40:28) [GET]
+
+TypeError (user is not a valid base type):
+  C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/support/signature_types.rb:73:in `canonical_type_name'
+  C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/support/signature_types.rb:47:in `canonical_type'
+  C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/support/signature_types.rb:35:in `canonical_signature_entry'
+  C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/support/signature_types.rb:33:in `canonical_signature_entry'
+  C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/support/signature_types.rb:22:in `canonical_signature'
+  C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/support/signature_types.rb:22:in `map'
+  C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/support/signature_types.rb:22:in `canonical_signature'
+  C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/api.rb:80:in `api_method'
+  app/services/user_api.rb:3
+  app/services/user_api.rb:380:in `load'
+  C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/container/action_controller_container.rb:62:in `require_web_service_api'
+  C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/container/action_controller_container.rb:48:in `web_service_api_with_require'
+  C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/container/action_controller_container.rb:85:in `inherited_with_api'
+  C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/dispatcher/action_controller_dispatcher.rb:32:in `inherited_with_action_controller'
+  app/controllers/user_controller.rb:1
+  app/controllers/user_controller.rb:380:in `load'
+  :1:in `initialize'
+
+Rendered rescues/_trace (63.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#wsdl (for 127.0.0.1 at 2009-04-15 10:40:31) [GET]
+
+TypeError (user is not a valid base type):
+  C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/support/signature_types.rb:73:in `canonical_type_name'
+  C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/support/signature_types.rb:47:in `canonical_type'
+  C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/support/signature_types.rb:35:in `canonical_signature_entry'
+  C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/support/signature_types.rb:33:in `canonical_signature_entry'
+  C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/support/signature_types.rb:22:in `canonical_signature'
+  C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/support/signature_types.rb:22:in `map'
+  C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/support/signature_types.rb:22:in `canonical_signature'
+  C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/api.rb:80:in `api_method'
+  app/services/user_api.rb:3
+  app/services/user_api.rb:380:in `load'
+  C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/container/action_controller_container.rb:62:in `require_web_service_api'
+  C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/container/action_controller_container.rb:48:in `web_service_api_with_require'
+  C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/container/action_controller_container.rb:85:in `inherited_with_api'
+  C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/dispatcher/action_controller_dispatcher.rb:32:in `inherited_with_action_controller'
+  app/controllers/user_controller.rb:1
+  app/controllers/user_controller.rb:380:in `load'
+  :1:in `initialize'
+
+Rendered rescues/_trace (62.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#wsdl (for 127.0.0.1 at 2009-04-15 10:40:31) [GET]
+
+TypeError (user is not a valid base type):
+  C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/support/signature_types.rb:73:in `canonical_type_name'
+  C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/support/signature_types.rb:47:in `canonical_type'
+  C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/support/signature_types.rb:35:in `canonical_signature_entry'
+  C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/support/signature_types.rb:33:in `canonical_signature_entry'
+  C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/support/signature_types.rb:22:in `canonical_signature'
+  C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/support/signature_types.rb:22:in `map'
+  C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/support/signature_types.rb:22:in `canonical_signature'
+  C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/api.rb:80:in `api_method'
+  app/services/user_api.rb:3
+  app/services/user_api.rb:380:in `load'
+  C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/container/action_controller_container.rb:62:in `require_web_service_api'
+  C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/container/action_controller_container.rb:48:in `web_service_api_with_require'
+  C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/container/action_controller_container.rb:85:in `inherited_with_api'
+  C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/dispatcher/action_controller_dispatcher.rb:32:in `inherited_with_action_controller'
+  app/controllers/user_controller.rb:1
+  app/controllers/user_controller.rb:380:in `load'
+  :1:in `initialize'
+
+Rendered rescues/_trace (47.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UserController#wsdl (for 127.0.0.1 at 2009-04-15 10:40:39) [GET]
+Sending data 
+Completed in 15ms (View: 0, DB: 0) | 200 OK [http://localhost/user/wsdl]
+
+
+Processing UserController#wsdl (for 127.0.0.1 at 2009-04-15 10:40:39) [GET]
+Sending data 
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://localhost/user/wsdl]
+
+
+Processing UserController#api (for 127.0.0.1 at 2009-04-15 10:40:42) [POST]
+  Parameters: {"envelope"=>{"xmlns:soapenv"=>"http://schemas.xmlsoap.org/soap/envelope/", "xmlns:ns0"=>"urn:ActionWebService", "xmlns:xsd"=>"http://www.w3.org/2001/XMLSchema", "xmlns:xsi"=>"http://www.w3.org/2001/XMLSchema-instance", "body"=>{"get_users"=>nil}}}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM users [0m
+
+Web Service Request: GetUsers() Entrypoint: api
+  <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns0="urn:ActionWebService" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <soapenv:Body>
+  <ns0:GetUsers/>
+  </soapenv:Body>
+  </soapenv:Envelope>
+
+Web Service Response (0.062000): => ["#<User:0xe38fae>", "#<User:0x1ee1619>"]
+  <?xml version="1.0" encoding="UTF-8" ?>
+  <env:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+      xmlns:env="http://schemas.xmlsoap.org/soap/envelope/">
+    <env:Body>
+      <n1:GetUsersResponse env:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+          xmlns:n1="urn:ActionWebService">
+        <return xmlns:n2="http://schemas.xmlsoap.org/soap/encoding/"
+            n2:arrayType="xsd:string[2]"
+            xsi:type="n2:Array">
+          <item>#&lt;User:0xe38fae&gt;</item>
+          <item>#&lt;User:0x1ee1619&gt;</item>
+        </return>
+      </n1:GetUsersResponse>
+    </env:Body>
+  </env:Envelope>
+Sending data 
+Completed in 78ms (View: 0, DB: 0) | 200 OK [http://localhost/user/api]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-04-15 10:41:22) [GET]
+  Parameters: {"id"=>"wsdl"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM users WHERE (users.id = 'wsdl') [0m
+
+ActiveRecord::RecordNotFound (Couldn't find User with ID=wsdl):
+  app/controllers/users_controller.rb:8:in `show'
+  :1:in `initialize'
+
+Rendered rescues/_trace (31.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-04-15 10:41:26) [GET]
+  Parameters: {"id"=>"wsdl"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM users WHERE (users.id = 'wsdl') [0m
+
+ActiveRecord::RecordNotFound (Couldn't find User with ID=wsdl):
+  app/controllers/users_controller.rb:8:in `show'
+  :1:in `initialize'
+
+Rendered rescues/_trace (31.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing UserController#wsdl (for 127.0.0.1 at 2009-04-15 10:41:29) [GET]
+Sending data 
+Completed in 15ms (View: 0, DB: 0) | 200 OK [http://localhost/user/wsdl]
+
+
+Processing UserController#invocation (for 127.0.0.1 at 2009-04-15 10:46:51) [GET]
+
+ActionView::TemplateError (No such file or directory - File not found - ./C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/templates/scaffolds/methods.html.erb) in C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/templates/scaffolds/methods.html.erb:
+
+    C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/scaffolding.rb:229:in `render_invocation_scaffold'
+    C:/develop/jruby/lib/ruby/gems/1.8/gems/datanoise-actionwebservice-2.3.2/lib/action_web_service/scaffolding.rb:163:in `invocation'
+    :1:in `initialize'
+
+Rendered rescues/_trace (47.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UserController#index (for 127.0.0.1 at 2009-04-15 10:47:02) [GET]
+
+ActionController::UnknownAction (No action responded to index. Actions: api, get_users, invocation, invocation_method_params, invocation_submit, and wsdl):
+  :1:in `initialize'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-04-15 10:47:05) [GET]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM users [0m
+Rendering template within layouts/application
+Rendering users/index
+Completed in 812ms (View: 781, DB: 0) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-04-15 10:47:09) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM users WHERE (users.id = '1') [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mGroup Load (0.0ms)[0m   [0mSELECT * FROM groups INNER JOIN groups_users ON groups.id = groups_users.group_id WHERE (groups_users.user_id = 1 ) [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'Group') [0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'User') [0m
+Completed in 203ms (View: 188, DB: 0) | 200 OK [http://localhost/users/1]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-04-15 10:48:15) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM users WHERE (users.id = '1') [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mGroup Load (0.0ms)[0m   [0mSELECT * FROM groups INNER JOIN groups_users ON groups.id = groups_users.group_id WHERE (groups_users.user_id = 1 ) [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'Group') [0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'User') [0m
+Completed in 141ms (View: 62, DB: 0) | 200 OK [http://localhost/users/1]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2009-04-15 10:48:17) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM users WHERE (users.id = '1') [0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered users/_form (31.0ms)
+Completed in 78ms (View: 63, DB: 0) | 200 OK [http://localhost/users/1/edit]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-04-15 10:48:18) [GET]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM users [0m
+Rendering template within layouts/application
+Rendering users/index
+Completed in 46ms (View: 31, DB: 0) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-04-15 10:48:21) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM users WHERE (users.id = '1') [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mGroup Load (0.0ms)[0m   [0mSELECT * FROM groups INNER JOIN groups_users ON groups.id = groups_users.group_id WHERE (groups_users.user_id = 1 ) [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'Group') [0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'User') [0m
+Completed in 110ms (View: 94, DB: 0) | 200 OK [http://localhost/users/1]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-04-15 10:48:26) [GET]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM users [0m
+Rendering template within layouts/application
+Rendering users/index
+Completed in 46ms (View: 31, DB: 0) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-04-15 10:48:27) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM users WHERE (users.id = '2') [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mGroup Load (0.0ms)[0m   [0;1mSELECT * FROM groups INNER JOIN groups_users ON groups.id = groups_users.group_id WHERE (groups_users.user_id = 2 ) [0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM roles WHERE (roles.roleable_id = 2 AND roles.roleable_type = 'User') [0m
+Completed in 63ms (View: 31, DB: 0) | 200 OK [http://localhost/users/2]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-04-15 10:48:29) [GET]
+  [4;36;1mUser Load (15.0ms)[0m   [0;1mSELECT * FROM users [0m
+Rendering template within layouts/application
+Rendering users/index
+Completed in 47ms (View: 32, DB: 15) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-04-15 11:20:37) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM users WHERE (users.id = '1') [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mGroup Load (0.0ms)[0m   [0;1mSELECT * FROM groups INNER JOIN groups_users ON groups.id = groups_users.group_id WHERE (groups_users.user_id = 1 ) [0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'Group') [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'User') [0m
+Completed in 250ms (View: 157, DB: 0) | 200 OK [http://localhost/users/1]
+
+
+Processing UsersController#show to xml (for 127.0.0.1 at 2009-04-15 11:20:41) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM users WHERE (users.id = '1') [0m
+Completed in 47ms (View: 15, DB: 0) | 200 OK [http://localhost/users/1.xml]
+
+
+Processing RolesController#index to xml (for 127.0.0.1 at 2009-04-15 11:20:47) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM users WHERE (users.id = '1') [0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'User') [0m
+Completed in 157ms (View: 94, DB: 0) | 200 OK [http://localhost/users/1/roles.xml]
+  [4;36;1mUser Load (31.0ms)[0m   [0;1mSELECT * FROM users LIMIT 1[0m
+  [4;35;1mGroup Load (0.0ms)[0m   [0mSELECT * FROM groups INNER JOIN groups_users ON groups.id = groups_users.group_id WHERE (groups_users.user_id = 1 ) [0m
+  [4;36;1mGroup Load (0.0ms)[0m   [0;1mSELECT * FROM groups LIMIT 1[0m
+  [4;35;1mGroup Load (0.0ms)[0m   [0mActiveRecord::ActiveRecordError: no such column: groups.subgroups_type: SELECT * FROM groups WHERE (groups.subgroups_id = 1 AND groups.subgroups_type = 'Group') [0m
+  [4;36;1mGroup Load (0.0ms)[0m   [0;1mSELECT * FROM groups LIMIT 1[0m
+  [4;35;1mGroup Load (0.0ms)[0m   [0mSELECT * FROM groups WHERE (groups.group_id = 1) [0m
+
+
+Processing RolesController#index to xml (for 127.0.0.1 at 2009-04-15 11:42:40) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM users WHERE (users.id = '1') [0m
+  [4;35;1mGroup Load (0.0ms)[0m   [0mSELECT * FROM groups INNER JOIN groups_users ON groups.id = groups_users.group_id WHERE (groups_users.user_id = 1 ) [0m
+
+NoMethodError (undefined method `append' for #<Class:0x78234c>):
+  app/controllers/roles_controller.rb:9:in `index'
+  app/controllers/roles_controller.rb:8:in `index'
+  :1:in `initialize'
+
+Rendered rescues/_trace (78.0ms)
+Rendered rescues/_request_and_response (78.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RolesController#index to xml (for 127.0.0.1 at 2009-04-15 11:46:11) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM users WHERE (users.id = '1') [0m
+  [4;35;1mGroup Load (0.0ms)[0m   [0mSELECT * FROM groups INNER JOIN groups_users ON groups.id = groups_users.group_id WHERE (groups_users.user_id = 1 ) [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'Group') [0m
+  [4;35;1mRole Update (78.0ms)[0m   [0mUPDATE roles SET roleable_type = 'User', updated_at = 1239788775 WHERE id = 2[0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'User') [0m
+Completed in 4594ms (View: 0, DB: 78) | 200 OK [http://localhost/users/1/roles.xml]
+
+
+Processing RolesController#index to xml (for 127.0.0.1 at 2009-04-15 11:49:03) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM users WHERE (users.id = '1') [0m
+  [4;36;1mGroup Load (0.0ms)[0m   [0;1mSELECT * FROM groups INNER JOIN groups_users ON groups.id = groups_users.group_id WHERE (groups_users.user_id = 1 ) [0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'Group') [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'User') [0m
+Completed in 94ms (View: 31, DB: 0) | 200 OK [http://localhost/users/1/roles.xml]
+
+
+Processing RolesController#index to xml (for 127.0.0.1 at 2009-04-15 11:49:10) [GET]
+  Parameters: {"group_id"=>"1"}
+  [4;35;1mGroup Load (0.0ms)[0m   [0mSELECT * FROM groups WHERE (groups.id = '1') [0m
+  [4;36;1mGroup Load (0.0ms)[0m   [0;1mSELECT * FROM groups WHERE (groups.group_id = 1) [0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'Group') [0m
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://localhost/groups/1/roles.xml]
+
+
+Processing GroupsController#show (for 127.0.0.1 at 2009-04-15 13:21:38) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mGroup Load (0.0ms)[0m   [0;1mSELECT * FROM groups WHERE (groups.id = '1') [0m
+Rendering template within layouts/application
+Rendering groups/show
+Completed in 157ms (View: 141, DB: 0) | 200 OK [http://localhost/groups/1]
+
+
+Processing GroupsController#show to xml (for 127.0.0.1 at 2009-04-15 13:21:43) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mGroup Load (0.0ms)[0m   [0mSELECT * FROM groups WHERE (groups.id = '1') [0m
+Completed in 47ms (View: 15, DB: 0) | 200 OK [http://localhost/groups/1.xml]
+
+
+Processing RolesController#index (for 127.0.0.1 at 2009-04-15 13:21:48) [GET]
+  Parameters: {"group_id"=>"1"}
+  [4;36;1mGroup Load (0.0ms)[0m   [0;1mSELECT * FROM groups WHERE (groups.id = '1') [0m
+  [4;35;1mGroup Load (0.0ms)[0m   [0mSELECT * FROM groups WHERE (groups.group_id = 1) [0m
+Rendering template within layouts/application
+Rendering roles/index
+  [4;36;1mRole Load (16.0ms)[0m   [0;1mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'Group') [0m
+Completed in 47ms (View: 0, DB: 16) | 200 OK [http://localhost/groups/1/roles]
+
+
+Processing RolesController#index to xml (for 127.0.0.1 at 2009-04-15 13:21:54) [GET]
+  Parameters: {"group_id"=>"1"}
+  [4;35;1mGroup Load (0.0ms)[0m   [0mSELECT * FROM groups WHERE (groups.id = '1') [0m
+  [4;36;1mGroup Load (0.0ms)[0m   [0;1mSELECT * FROM groups WHERE (groups.group_id = 1) [0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'Group') [0m
+Completed in 172ms (View: 16, DB: 0) | 200 OK [http://localhost/groups/1/roles.xml]
+  [4;36;1mGroup Load (0.0ms)[0m   [0;1mSELECT * FROM groups WHERE (groups.id = 1) [0m
+  [4;35;1mGroup Load (0.0ms)[0m   [0mSELECT * FROM groups WHERE (groups.id = 1) [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'Group') [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM users LIMIT 1[0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'User') [0m
+  [4;35;1mRole Create (0.0ms)[0m   [0mINSERT INTO roles (name, info, roleable_id, roleable_type, created_at, updated_at) VALUES('ruolo2', 'Ruolo test 2', NULL, NULL, 1239794643, 1239794643)[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT SEQ FROM SQLITE_SEQUENCE WHERE NAME = 'roles'[0m
+  [4;35;1mRole Update (0.0ms)[0m   [0mUPDATE roles SET roleable_id = 1, roleable_type = 'Group', updated_at = 1239794650 WHERE id = 3[0m
+  [4;36;1mGroup Load (0.0ms)[0m   [0;1mSELECT * FROM groups INNER JOIN groups_users ON groups.id = groups_users.group_id WHERE (groups_users.user_id = 1 ) [0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'Group') [0m
+
+
+Processing RolesController#index to xml (for 127.0.0.1 at 2009-04-15 13:29:21) [GET]
+  Parameters: {"group_id"=>"1"}
+  [4;36;1mGroup Load (0.0ms)[0m   [0;1mSELECT * FROM groups WHERE (groups.id = '1') [0m
+  [4;35;1mGroup Load (0.0ms)[0m   [0mSELECT * FROM groups WHERE (groups.group_id = 1) [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'Group') [0m
+Completed in 62ms (View: 15, DB: 0) | 200 OK [http://localhost/groups/1/roles.xml]
+
+
+Processing RolesController#index to xml (for 127.0.0.1 at 2009-04-15 13:30:22) [GET]
+  Parameters: {"group_id"=>"1"}
+  [4;35;1mGroup Load (0.0ms)[0m   [0mSELECT * FROM groups WHERE (groups.id = '1') [0m
+  [4;36;1mGroup Load (0.0ms)[0m   [0;1mSELECT * FROM groups WHERE (groups.group_id = 1) [0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'Group') [0m
+Completed in 47ms (View: 0, DB: 0) | 200 OK [http://localhost/groups/1/roles.xml]
+
+
+Processing RolesController#index to xml (for 127.0.0.1 at 2009-04-15 13:30:27) [GET]
+  Parameters: {"group_id"=>"2"}
+  [4;36;1mGroup Load (0.0ms)[0m   [0;1mSELECT * FROM groups WHERE (groups.id = '2') [0m
+  [4;35;1mGroup Load (0.0ms)[0m   [0mSELECT * FROM groups WHERE (groups.group_id = 2) [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM roles WHERE (roles.roleable_id = 2 AND roles.roleable_type = 'Group') [0m
+Completed in 78ms (View: 0, DB: 0) | 200 OK [http://localhost/groups/2/roles.xml]
+
+
+Processing RolesController#index to xml (for 127.0.0.1 at 2009-04-15 13:30:34) [GET]
+  Parameters: {"group_id"=>"1"}
+  [4;35;1mGroup Load (0.0ms)[0m   [0mSELECT * FROM groups WHERE (groups.id = '1') [0m
+  [4;36;1mGroup Load (0.0ms)[0m   [0;1mSELECT * FROM groups WHERE (groups.group_id = 1) [0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'Group') [0m
+Completed in 63ms (View: 0, DB: 0) | 200 OK [http://localhost/groups/1/roles.xml]
+
+
+Processing GroupsController#index (for 127.0.0.1 at 2009-04-15 13:30:37) [GET]
+  [4;36;1mGroup Load (0.0ms)[0m   [0;1mSELECT * FROM groups [0m
+Rendering template within layouts/application
+Rendering groups/index
+Completed in 63ms (View: 32, DB: 0) | 200 OK [http://localhost/groups]
+
+
+Processing GroupsController#show (for 127.0.0.1 at 2009-04-15 13:30:38) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mGroup Load (0.0ms)[0m   [0mSELECT * FROM groups WHERE (groups.id = '1') [0m
+Rendering template within layouts/application
+Rendering groups/show
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/groups/1]
+
+
+Processing GroupsController#index (for 127.0.0.1 at 2009-04-15 13:30:42) [GET]
+  [4;36;1mGroup Load (0.0ms)[0m   [0;1mSELECT * FROM groups [0m
+Rendering template within layouts/application
+Rendering groups/index
+Completed in 110ms (View: 94, DB: 0) | 200 OK [http://localhost/groups]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-04-15 13:30:46) [GET]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM users [0m
+Rendering template within layouts/application
+Rendering users/index
+Completed in 47ms (View: 32, DB: 0) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#destroy (for 127.0.0.1 at 2009-04-15 13:30:50) [DELETE]
+  Parameters: {"authenticity_token"=>"VEIp1BfQuknsReo8iyOgRk3RngzrkgqQQe3jteUP2Wo=", "id"=>"2"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM users WHERE (users.id = '2') [0m
+  [4;35;1mGroup Load (0.0ms)[0m   [0mSELECT * FROM groups INNER JOIN groups_users ON groups.id = groups_users.group_id WHERE (groups_users.user_id = 2 ) [0m
+  [4;36;1mUser Destroy (15.0ms)[0m   [0;1mDELETE FROM users WHERE id = 2[0m
+Redirected to http://localhost:3000/users
+Completed in 109ms (DB: 15) | 302 Found [http://localhost/users/2]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-04-15 13:30:50) [GET]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM users [0m
+Rendering template within layouts/application
+Rendering users/index
+Completed in 63ms (View: 31, DB: 0) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-04-15 13:30:52) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM users WHERE (users.id = '1') [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mGroup Load (0.0ms)[0m   [0mSELECT * FROM groups INNER JOIN groups_users ON groups.id = groups_users.group_id WHERE (groups_users.user_id = 1 ) [0m
+  [4;36;1mRole Load (0.0ms)[0m   [0;1mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'Group') [0m
+  [4;35;1mRole Load (0.0ms)[0m   [0mSELECT * FROM roles WHERE (roles.roleable_id = 1 AND roles.roleable_type = 'User') [0m
+Completed in 78ms (View: 63, DB: 0) | 200 OK [http://localhost/users/1]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-04-15 13:31:42) [GET]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM users [0m
+Rendering template within layouts/application
+Rendering users/index
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2009-04-15 13:31:44) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM users WHERE (users.id = '1') [0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered users/_form (16.0ms)
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/users/1/edit]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-04-15 13:31:45) [GET]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM users [0m
+Rendering template within layouts/application
+Rendering users/index
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2009-04-15 13:31:48) [GET]
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (0.0ms)
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2009-04-15 13:31:50) [GET]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM users [0m
+Rendering template within layouts/application
+Rendering users/index
+Completed in 32ms (View: 32, DB: 0) | 200 OK [http://localhost/users]

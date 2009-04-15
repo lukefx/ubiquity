@@ -3,12 +3,12 @@ class RolesController < ApplicationController
   def index
   
     @roleable = find_parent
-    @roles = @roleable.roles    
+    @roles = @roleable.try(:all_roles) | @roleable.roles
     
     respond_to do |format|
       format.html
       format.xml  { render :xml => @roles }
-    end 
+    end
   end
 
   def destroy
