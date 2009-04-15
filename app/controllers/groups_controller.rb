@@ -2,6 +2,12 @@ class GroupsController < ApplicationController
 
   def index
     
+    if params[:id] =~ /^\d+$/
+      @user = User.find(params[:id])
+    else
+      @user = User.find_by_nickname(params[:id])
+    end
+    
     if params[:user_id].nil?
       @groups = Group.all
     else

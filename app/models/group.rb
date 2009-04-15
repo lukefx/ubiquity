@@ -4,6 +4,10 @@ class Group < ActiveRecord::Base
   has_many :groups
   has_many :roles, :as => :roleable
 
+  def to_param
+    name
+  end
+
   # Ritorna tutti i ruoli del gruppo
   # ereditando dai sottogruppi del gruppo
   def all_roles
