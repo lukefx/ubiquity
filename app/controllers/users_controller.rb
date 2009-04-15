@@ -5,7 +5,12 @@ class UsersController < ApplicationController
   end
   
   def show
-    @user = User.find(params[:id])
+    
+    if params[:id] =~ /^\d+$/
+      @user = User.find(params[:id])
+    else
+      @user = User.find_by_nickname(params[:id])
+    end
     
     respond_to do |format|
       format.html

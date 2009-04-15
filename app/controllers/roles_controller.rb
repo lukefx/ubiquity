@@ -7,7 +7,7 @@ class RolesController < ApplicationController
     
     respond_to do |format|
       format.html
-      format.xml  { render :xml => @roles }
+      format.xml { render :xml => @roles }
     end
   end
 

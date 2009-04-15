@@ -3,14 +3,14 @@ class GroupsController < ApplicationController
   def index
     
     if params[:user_id].nil?
-      @groups = Group.find(:all)
+      @groups = Group.all
     else
       @groups = User.find(params[:user_id]).groups
     end    
 
     respond_to do |format|
       format.html
-      format.xml  { render :xml => @groups }
+      format.xml { render :xml => @groups }
     end
     
   end

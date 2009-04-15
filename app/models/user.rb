@@ -6,6 +6,10 @@ class User < ActiveRecord::Base
   validates_presence_of :nickname
   validates_confirmation_of :password, :if => :password_changed?
 
+  def to_param
+    nickname
+  end
+
   # Ritorna tutti i ruoli utente
   # ereditando dai gruppi dell'utente
   def all_roles
